@@ -1,0 +1,77 @@
+.jobs {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.jobs .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.jobs .container > span {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 85px;
+}
+
+.jobs .grid-image {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.jobs .grid-image .image-container {
+  width: 310px;
+  padding: 1em;
+  margin: 1em 2em;
+}
+
+.image-container .image {
+  width: 310px;
+  height: 162.5px;
+  border-radius: 25px 25px 0;
+  margin-bottom: 1em;
+}
+.image-container .image.jobs-1 {
+  background: url('../assets/jobs-1.jpg') no-repeat bottom;
+  background-size: cover;
+}
+
+.image-container .image.jobs-2 {
+  background: url('../assets/jobs-2.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.image-container .image.jobs-3 {
+  background: url('../assets/jobs-3.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 0 25px 25px 25px;
+}
+
+.image-container .image.jobs-4 {
+  background: url('../assets/jobs-4.jpg') no-repeat center;
+  background-size: cover;
+  border-radius: 0 25px 25px 25px;
+}
+
+.image-container > div {
+  padding: 1em;
+}
+
+.image-container .title {
+  color: var(--color-orange-dark);
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.image-container .text {
+  font-size: 0.9em;
+}
+
+@media screen and (max-width: 992px) {
+}

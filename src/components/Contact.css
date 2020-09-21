@@ -1,0 +1,163 @@
+.contact {
+  background: var(--color-light-gray-15);
+  font-size: 2em;
+  padding: 0 4em;
+  max-width: 100vw;
+  margin: 0;
+}
+
+.contact .container {
+  height: 100vh;
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.contact .container .contacto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  height: 100%;
+  font-weight: normal;
+  position: relative;
+}
+
+.contact .container .contacto > div {
+  font-size: 0.5em;
+  width: 100%;
+}
+
+.contact .container .contacto .inputs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact .container .contacto .inputs > div {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.contact .inputText {
+  border-style: none;
+  padding: 1em 0;
+  min-width: 200px;
+  border-bottom: 1px solid var(--color-orange);
+  background: transparent;
+  outline: none;
+}
+
+.contact .container .contacto .inputTextArea {
+  border-style: none;
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  resize: none;
+  width: calc(100% - 2em);
+  min-height: 150px;
+  border-bottom: 1px solid var(--color-orange);
+  background: transparent;
+  outline: none;
+}
+
+.contact .inputs > input {
+  margin: 1em 0;
+  width: 40%;
+}
+.contact .inputs > textarea {
+  margin: 1em 0;
+  height: 30vh;
+}
+
+.contact .container .contacto .button {
+  color: var(--color-white);
+  background: var(--color-orange);
+  border-radius: 25px;
+  min-width: 125px;
+  border-style: none;
+  padding: 0.25em 0.5em;
+  font-size: 0.65em;
+  box-shadow: 4px 4px 10px 0px grey;
+  cursor: pointer;
+}
+
+.contact .container .contacto .button:active {
+  box-shadow: none;
+}
+
+.contact .socialNetwork {
+  font-size: 0.5em;
+  display: flex;
+  flex-direction: column;
+  height: 125px;
+  align-items: center;
+  color: var(--color-light-gray-75);
+  justify-content: space-around;
+  position: absolute;
+  top: 30%;
+  right: -80px;
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1368px) {
+  .contact .container {
+    width: 80%;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1200px) {
+  .contact .container {
+    width: 85%;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media screen and (max-width: 992px) {
+  .contact {
+    padding: 0 3em;
+  }
+
+  .contact .container {
+    width: 90%;
+  }
+
+  .contact .inputs > .inputText,
+  .contact .inputs > .inputTextArea {
+    flex: 1;
+    width: auto;
+    margin: 1.25em 0;
+  }
+  .contact .socialNetwork {
+    flex-direction: row;
+    width: 125px;
+    height: 0;
+    right: 0;
+    top: 95%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 768px) {
+  .contact {
+    padding: 0 2em;
+  }
+
+  .contact .container .contacto .inputs > div {
+    width: 100%;
+  }
+
+  .contact .container {
+    position: relative;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 576px) {
+  .contact {
+    padding: 0 1em;
+  }
+}

@@ -1,0 +1,56 @@
+:root {
+  --color-orange-dark: rgb(255, 135, 0);
+  --color-orange: rgb(255, 165, 0);
+  --color-white: rgb(255, 255, 255);
+  --color-white-75: rgb(255, 255, 255, 0.75);
+  --color-white-top-bottom: linear-gradient(
+    to bottom,
+    rgb(255, 255, 255, 1),
+    rgb(255, 255, 255, 0.75)
+  );
+  --color-black: rgb(0, 0, 0);
+  --color-light-gray-15: rgba(128, 128, 128, 0.15);
+  --color-light-gray-75: rgba(128, 128, 128, 0.75);
+  font-size: 16px;
+  font-family: 'Century Gothic';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+  box-sizing: content-box;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+#root {
+  /* max-width: 1280px;
+  margin: 0 auto; */
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  outline: none;
+}
+
+section {
+  min-height: 100vh;
+}
+
+section,
+header {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

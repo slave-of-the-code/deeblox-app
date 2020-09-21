@@ -1,42 +1,53 @@
-.footer {
-  height: auto;
+#footer {
+  position: relative;
   display: flex;
+  align-items: center;
   font-size: 16px;
+  height: auto;
+  max-width: 1368px;
+  margin: 0 auto;
   padding: 2em;
 }
 
-.footer .data {
+#footer .data {
   flex: 3;
-  border-right: 1px solid gray;
+  border-right: 1px solid var(--color-light-gray-75);
   display: flex;
-  padding-right: 1em;
-}
-
-.footer .info {
-  flex: 2;
-  padding-left: 1em;
-}
-
-.footer .data > div {
-  height: 100%;
-}
-
-ul.detail {
-  display: flex;
-  flex-direction: column;
+  padding-right: 2em;
   justify-content: space-between;
+  height: 90px;
+}
+
+#footer .data .container-detail-data {
+  flex: 4;
+  align-self: flex-end;
+}
+
+#footer .data .container-detail-data ul li {
+  padding: 0.25em 0;
+}
+
+#footer .data .container-detail-data ul li span svg {
+  margin-right: 0.5em;
+}
+
+#footer .data .container-social-network {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   flex: 1;
 }
 
-ul.detail i {
-  padding-right: 0.5em;
+#footer .data .container-social-network .socialNetwork {
+  flex-direction: row;
+  width: 100%;
+  color: var(--color-black);
+  align-items: flex-end;
 }
 
-ul.socialNetwork {
-  display: flex;
-  justify-content: space-around;
-  width: 175px;
-  align-items: flex-end;
+#footer .info {
+  flex: 2;
+  padding-left: 1em;
 }
 
 /* Large devices (desktops, less than 1200px) */
@@ -45,20 +56,20 @@ ul.socialNetwork {
 
 /* Large devices (desktops, less than 1200px) */
 @media screen and (max-width: 1200px) {
-  .footer {
+  #footer {
     flex-direction: column-reverse;
   }
 
-  .footer .info {
+  #footer .info {
     padding: 0;
   }
-  .footer .data {
+  #footer .data {
     padding-right: 0;
     margin-top: 1em;
     border-style: none;
   }
 
-  .footer .data .detail {
+  #footer .data .detail {
     flex-direction: row;
     justify-content: space-around;
   }
@@ -66,12 +77,12 @@ ul.socialNetwork {
 
 /* Medium devices (tablets, less than 992px) */
 @media screen and (max-width: 992px) {
-  .footer .data {
+  #footer .data {
     flex-direction: column;
     align-items: center;
   }
 
-  .footer .data .detail {
+  #footer .data .detail {
     flex-direction: column;
     align-items: center;
     margin-bottom: 1em;

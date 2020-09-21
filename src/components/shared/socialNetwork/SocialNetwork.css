@@ -1,0 +1,9 @@
+.socialNetwork {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 125px;
+  align-items: center;
+  color: var(--color-light-gray-75);
+  justify-content: space-around;
+}

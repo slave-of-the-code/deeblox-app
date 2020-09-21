@@ -1,7 +1,22 @@
-import React from "react";
-import "./Contact.css";
+import React from 'react';
+import {
+  faTwitter,
+  faFacebookF,
+  faInstagram,
+  faYoutube
+} from '@fortawesome/free-brands-svg-icons';
+
+import Button from '../shared/button/Button';
+import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
+import './Contact.css';
 
 const Contact = () => {
+  const listSocialNetwork = [
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faTwitter },
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
+  ];
   return (
     <>
       <section className="contact" id="contact">
@@ -30,21 +45,9 @@ const Contact = () => {
               <span className="inputLabel">Mensaje</span>
               <textarea className="inputTextArea"></textarea>
             </div>
-            <input type="submit" value="Enviar" className="button"></input>
-            <article className="socialNetwork">
-              <a href="#twitter">
-                <i className="fab fa-twitter"></i>
-              </a>
-              <a href="#facebook">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-              <a href="#instagram">
-                <i className="fab fa-instagram"></i>
-              </a>
-              <a href="#youtube">
-                <i className="fab fa-youtube"></i>
-              </a>
-            </article>
+            {/* <input type="submit" value="Enviar" className="button"></input> */}
+            <Button text="Enviar" />
+            <SocialNetwork listSocialNetwork={listSocialNetwork} />
           </div>
         </div>
       </section>

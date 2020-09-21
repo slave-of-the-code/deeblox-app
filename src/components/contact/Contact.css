@@ -72,30 +72,7 @@
   height: 30vh;
 }
 
-.contact .container .contacto .button {
-  color: var(--color-white);
-  background: var(--color-orange);
-  border-radius: 25px;
-  min-width: 125px;
-  border-style: none;
-  padding: 0.25em 0.5em;
-  font-size: 0.65em;
-  box-shadow: 4px 4px 10px 0px grey;
-  cursor: pointer;
-}
-
-.contact .container .contacto .button:active {
-  box-shadow: none;
-}
-
-.contact .socialNetwork {
-  font-size: 0.5em;
-  display: flex;
-  flex-direction: column;
-  height: 125px;
-  align-items: center;
-  color: var(--color-light-gray-75);
-  justify-content: space-around;
+#contact .socialNetwork {
   position: absolute;
   top: 30%;
   right: -80px;

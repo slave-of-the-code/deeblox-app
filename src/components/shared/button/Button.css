@@ -1,0 +1,15 @@
+.button {
+  color: var(--color-white);
+  background: var(--color-orange);
+  border-radius: 25px;
+  min-width: 125px;
+  border-style: none;
+  padding: 0.25em 0.5em;
+  font-size: 1.25rem;
+  box-shadow: 4px 4px 10px 0px grey;
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: none;
+}

@@ -38,23 +38,23 @@
   margin-bottom: 1em;
 }
 .image-container .image.jobs-1 {
-  background: url('../assets/jobs-1.jpg') no-repeat bottom;
+  background: url('../../assets/jobs-1.jpg') no-repeat bottom;
   background-size: cover;
 }
 
 .image-container .image.jobs-2 {
-  background: url('../assets/jobs-2.jpg') no-repeat center;
+  background: url('../../assets/jobs-2.jpg') no-repeat center;
   background-size: cover;
 }
 
 .image-container .image.jobs-3 {
-  background: url('../assets/jobs-3.jpg') no-repeat center;
+  background: url('../../assets/jobs-3.jpg') no-repeat center;
   background-size: cover;
   border-radius: 0 25px 25px 25px;
 }
 
 .image-container .image.jobs-4 {
-  background: url('../assets/jobs-4.jpg') no-repeat center;
+  background: url('../../assets/jobs-4.jpg') no-repeat center;
   background-size: cover;
   border-radius: 0 25px 25px 25px;
 }
@@ -73,5 +73,22 @@
   font-size: 0.9em;
 }
 
+/* Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1368px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1200px) {
+}
+
+/* Medium devices (tablets, less than 992px) */
 @media screen and (max-width: 992px) {
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 768px) {
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 576px) {
 }

@@ -1,9 +1,9 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Layout from "./components/Layout";
-import AboutUs from "./components/AboutUs";
-import Jobs from "./components/Jobs";
-import Contact from "./components/Contact";
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import AboutUs from './components/aboutUs/AboutUs';
+import Jobs from './components/jobs/Jobs';
+import Contact from './components/contact/Contact';
 
 const DeebloxApp = () => {
   return (
@@ -14,10 +14,14 @@ const DeebloxApp = () => {
             <>
               <AboutUs />
               <Jobs />
+              <Contact />
             </>
           </Route>
-          <Route path="/contact">
-            <Contact />
+          <Route path="/more-info">
+            {/* <Contact /> */}
+            <>
+              <h1>more info</h1>
+            </>
           </Route>
         </Switch>
       </Layout>

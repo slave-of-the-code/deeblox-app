@@ -39,6 +39,11 @@ ul.socialNetwork {
   align-items: flex-end;
 }
 
+/* Large devices (desktops, less than 1200px) */
+@media screen and (max-width: 1368px) {
+}
+
+/* Large devices (desktops, less than 1200px) */
 @media screen and (max-width: 1200px) {
   .footer {
     flex-direction: column-reverse;
@@ -59,6 +64,7 @@ ul.socialNetwork {
   }
 }
 
+/* Medium devices (tablets, less than 992px) */
 @media screen and (max-width: 992px) {
   .footer .data {
     flex-direction: column;
@@ -70,4 +76,12 @@ ul.socialNetwork {
     align-items: center;
     margin-bottom: 1em;
   }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 768px) {
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 576px) {
 }

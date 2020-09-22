@@ -7,9 +7,9 @@ import './SocialNetwork.css';
 const SocialNetwork = ({ listSocialNetwork }) => (
   <>
     <ul className="socialNetwork">
-      {listSocialNetwork.map((item) => {
+      {listSocialNetwork.map((item, index) => {
         return (
-          <li>
+          <li key={index}>
             <Link to={item.url} target="_blank">
               <FontAwesomeIcon icon={item.icon} />
             </Link>

@@ -12,17 +12,17 @@ import './Contact.css';
 
 const Contact = () => {
   const listSocialNetwork = [
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
     { url: 'https://www.linkedin.com/in/gustavoml/', icon: faTwitter },
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
     { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
     { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
   ];
   return (
     <>
-      <section className="contact" id="contact">
+      <section id="contact">
         <div className="container">
           <div className="contacto">
-            <span>Contacto</span>
+            <span className="title">Contacto</span>
             <div className="inputs">
               <div>
                 <span className="inputLabel">Nombre</span>
@@ -45,10 +45,9 @@ const Contact = () => {
               <span className="inputLabel">Mensaje</span>
               <textarea className="inputTextArea"></textarea>
             </div>
-            {/* <input type="submit" value="Enviar" className="button"></input> */}
             <Button text="Enviar" />
-            <SocialNetwork listSocialNetwork={listSocialNetwork} />
           </div>
+          <SocialNetwork listSocialNetwork={listSocialNetwork} />
         </div>
       </section>
     </>

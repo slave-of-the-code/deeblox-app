@@ -1,9 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faPhone,
   faEnvelope,
-  faMapMarker,
   faPhoneAlt,
   faMapMarkerAlt
 } from '@fortawesome/free-solid-svg-icons';
@@ -19,8 +17,8 @@ import './Footer.css';
 
 const Footer = () => {
   const listSocialNetwork = [
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
     { url: 'https://www.linkedin.com/in/gustavoml/', icon: faTwitter },
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
     { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
     { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
   ];

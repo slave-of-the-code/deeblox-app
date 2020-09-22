@@ -41,11 +41,13 @@ const Contact = () => {
                 <input className="inputText"></input>
               </div>
             </div>
-            <div>
+            <div className="input-textarea">
               <span className="inputLabel">Mensaje</span>
               <textarea className="inputTextArea"></textarea>
             </div>
-            <Button text="Enviar" />
+            <div className="button-Send">
+              <Button text="Enviar" />
+            </div>
           </div>
           <SocialNetwork listSocialNetwork={listSocialNetwork} />
         </div>

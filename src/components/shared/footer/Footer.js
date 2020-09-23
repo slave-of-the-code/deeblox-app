@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faPhone,
   faEnvelope,
-  faMapMarker
+  faPhoneAlt,
+  faMapMarkerAlt
 } from '@fortawesome/free-solid-svg-icons';
 import {
   faTwitter,
@@ -12,55 +12,43 @@ import {
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 
+import SocialNetwork from '../socialNetwork/SocialNetwork';
 import './Footer.css';
 
 const Footer = () => {
+  const listSocialNetwork = [
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faTwitter },
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
+    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
+  ];
   return (
     <>
-      <footer className="footer">
+      <footer id="footer">
         <div className="data">
-          <FontAwesomeIcon icon="check-square" />
-          <ul className="detail">
-            <li>
-              <span>
-                {/* <i className="fas fa-phone-alt"></i> */}
-                <FontAwesomeIcon icon={faPhone} /> +54 11 2821 9000
-              </span>
-            </li>
-            <li>
-              <span>
-                {/* <i className="fas fa-envelope"></i> */}
-                <FontAwesomeIcon icon={faEnvelope} /> contact@deeblox.com
-              </span>
-            </li>
-            <li>
-              <span>
-                {/* <i className="fas fa-map-marker-alt"></i> */}
-                <FontAwesomeIcon icon={faMapMarker} /> Avda. Ricardo Balbín 2437
-                - CABA - Buenos Aires.
-              </span>
-            </li>
-          </ul>
-
-          <ul className="socialNetwork">
-            <li>
-              {/* <i className="fab fa-twitter"></i> */}
-              <FontAwesomeIcon icon={faTwitter} />
-            </li>
-            <li>
-              {/* <i className="fab fa-facebook-f"></i> */}
-              <FontAwesomeIcon icon={faFacebookF} />
-            </li>
-            <li>
-              {/* <i className="fab fa-instagram"></i> */}
-              <FontAwesomeIcon icon={faInstagram} />
-            </li>
-            <li>
-              <i className="fab fa-youtube"></i>
-              <FontAwesomeIcon icon={faYoutube} />
-            </li>
-            <span>/Deeblox</span>
-          </ul>
+          <div className="container-detail-data">
+            <ul>
+              <li>
+                <span>
+                  <FontAwesomeIcon icon={faPhoneAlt} /> +54 11 2821 9000
+                </span>
+              </li>
+              <li>
+                <span>
+                  <FontAwesomeIcon icon={faEnvelope} /> contact@deeblox.com
+                </span>
+              </li>
+              <li>
+                <span>
+                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Avda. Ricardo Balbín
+                  2437 - CABA - Buenos Aires.
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div className="container-social-network">
+            <SocialNetwork listSocialNetwork={listSocialNetwork} /> /Deeblox
+          </div>
         </div>
         <div className="info">
           <p>

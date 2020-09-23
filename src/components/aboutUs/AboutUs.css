@@ -1,7 +1,36 @@
-.aboutUs {
-  background: orange;
+#aboutUs {
+  background: rgb(0, 238, 255);
+  max-width: 1368px;
+  margin: 0 auto;
+  font-size: 16px;
 }
 
+#aboutUs .container {
+  display: flex;
+  height: 100vh;
+}
+
+#aboutUs .container .info {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 3em;
+}
+
+#aboutUs .container .info .title {
+  flex: 1;
+}
+#aboutUs .container .info .text {
+  flex: 1;
+}
+#aboutUs .container .info .moreInfoButton {
+  flex: 1;
+}
+
+#aboutUs .container .image {
+  flex: 2;
+}
 /* Large devices (desktops, less than 1200px) */
 @media screen and (max-width: 1368px) {
 }

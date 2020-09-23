@@ -1,10 +1,12 @@
 import React from 'react';
 import './ContainerImages.css';
 
-const ContainerImages = ({ url }) => {
+const ContainerImages = ({ url, isAlignRight }) => {
+  const borderRadius = isAlignRight ? '0 40px 40px 40px ' : '40px 40px 0 40px ';
   const divStyle = {
     background: 'url(' + url + ') no-repeat center',
-    'background-size': 'cover'
+    backgroundSize: 'cover',
+    borderRadius: borderRadius
   };
 
   return (

@@ -1,58 +1,29 @@
-import React from "react";
+import React from 'react';
+import ContainerImages from '../shared/containerImages/ContainerImages';
 
-import "./Jobs.css";
+import jobs1 from '../../assets/jobs-1.jpg';
+import jobs2 from '../../assets/jobs-2.jpg';
+import jobs3 from '../../assets/jobs-3.jpg';
+import jobs4 from '../../assets/jobs-4.jpg';
+
+import './Jobs.css';
 
 const Jobs = () => {
+  const listImage = [
+    { url: jobs1 },
+    { url: jobs2 },
+    { url: jobs3 },
+    { url: jobs4 }
+  ];
   return (
     <>
-      <section className="jobs" id="jobs">
+      <section id="jobs">
         <div className="container">
           <span>Nuestros Servicios</span>
           <div className="grid-image">
-            <article className="image-container">
-              <div className="image jobs-4" title="job-4" />
-              <div>
-                <span className="title">Titular</span>
-                <p className="text">
-                  dolor sit amet, consectetur adipisc Lorem ipsum dolor amet,
-                  consectetur adipisc ing elit. Integer vulputate at sed
-                  condimen tum. Curabitur lorem nunc, dictum at
-                </p>
-              </div>
-            </article>
-            <article className="image-container">
-              <div className="image jobs-1" title="job-1" />
-              <div>
-                <span className="title">Titular</span>
-                <p className="text">
-                  dolor sit amet, consectetur adipisc Lorem ipsum dolor amet,
-                  consectetur adipisc ing elit. Integer vulputate at sed
-                  condimen tum. Curabitur lorem nunc, dictum at
-                </p>
-              </div>
-            </article>
-            <article className="image-container">
-              <div className="image jobs-3" title="job-3" />
-              <div>
-                <span className="title">Titular</span>
-                <p className="text">
-                  dolor sit amet, consectetur adipisc Lorem ipsum dolor amet,
-                  consectetur adipisc ing elit. Integer vulputate at sed
-                  condimen tum. Curabitur lorem nunc, dictum at
-                </p>
-              </div>
-            </article>
-            <article className="image-container">
-              <div className="image jobs-2" title="job-2" />
-              <div>
-                <span className="title">Titular</span>
-                <p className="text">
-                  dolor sit amet, consectetur adipisc Lorem ipsum dolor amet,
-                  consectetur adipisc ing elit. Integer vulputate at sed
-                  condimen tum. Curabitur lorem nunc, dictum at
-                </p>
-              </div>
-            </article>
+            {listImage.map((img, index) => {
+              return <ContainerImages url={img.url} />;
+            })}
           </div>
         </div>
       </section>

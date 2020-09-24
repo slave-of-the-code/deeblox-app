@@ -8,6 +8,7 @@
   position: relative;
   max-width: 1368px;
   margin: 0 auto;
+  margin-top: -0.5em;
 }
 
 #contact .container .contacto {

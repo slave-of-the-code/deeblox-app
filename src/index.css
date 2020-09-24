@@ -38,13 +38,8 @@ input {
 
 section {
   min-height: 100vh;
+  padding: 0.5em 0;
 }
-
-/* section,
-header {
-  max-width: 1280px;
-  margin: 0 auto;
-} */
 
 a {
   text-decoration: none;

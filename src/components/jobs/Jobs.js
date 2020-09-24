@@ -6,6 +6,9 @@ import img2 from '../../assets/img-web/rulosprogramandoweb.png';
 import img3 from '../../assets/img-web/manorelojWEB.png';
 import img4 from '../../assets/img-web/appleweb.png';
 
+import imageCircle from '../../assets/img-site/circle.png';
+import imageArrow from '../../assets/img-site/arrow.png';
+
 import './Jobs.css';
 
 const Jobs = () => {
@@ -15,6 +18,17 @@ const Jobs = () => {
     { url: img3, isAlignRight: true },
     { url: img4, isAlignRight: false }
   ];
+
+  const imageCircleStyle = {
+    background: `url(${imageCircle}) no-repeat center top`,
+    backgroundSize: 'contain'
+  };
+
+  const imageArrowStyle = {
+    background: `url(${imageArrow}) no-repeat center right`,
+    backgroundSize: 'contain'
+  };
+
   return (
     <>
       <section id="jobs">
@@ -31,6 +45,8 @@ const Jobs = () => {
               );
             })}
           </div>
+          <div className="imageCircle" style={imageCircleStyle}></div>
+          <div className="imageArrow" style={imageArrowStyle}></div>
         </div>
       </section>
     </>

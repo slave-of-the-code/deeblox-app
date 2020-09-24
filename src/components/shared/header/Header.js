@@ -14,7 +14,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="header">
+      <header id="header">
         <div className="logo">
           <h1>Deeblox</h1>
         </div>

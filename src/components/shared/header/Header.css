@@ -1,9 +1,13 @@
-.header {
+#header {
   height: 12vh;
   display: flex;
   font-size: 16px;
   align-items: flex-end;
   padding: 0 2em 1em 2em;
+  max-width: 1368px;
+  margin: 0 auto;
+  position: relative;
+  width: calc(100% - 4em);
 }
 
 .logo {

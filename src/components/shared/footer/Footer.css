@@ -16,6 +16,7 @@
   padding: 0 2em;
   justify-content: space-between;
   height: 90px;
+  font-size: 0.95em;
 }
 
 #footer .data .container-detail-data {
@@ -48,6 +49,7 @@
 #footer .info {
   flex: 2;
   padding-left: 1em;
+  font-size: 0.85em;
 }
 
 /* Large devices (desktops, less than 1200px) */

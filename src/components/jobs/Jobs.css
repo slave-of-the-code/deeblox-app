@@ -10,6 +10,8 @@
 #jobs .container {
   display: flex;
   flex-direction: column;
+  position: relative;
+  margin-top: -0.5em;
 }
 
 #jobs .container > span {
@@ -18,12 +20,32 @@
   align-items: center;
   justify-content: center;
   min-height: 85px;
+  padding: 1em 0;
+}
+
+#jobs .container > .imageCircle {
+  position: absolute;
+  left: 170px;
+  top: 80px;
+  height: 125px;
+  width: 125px;
+  z-index: -1;
+}
+
+#jobs .container > .imageArrow {
+  position: absolute;
+  right: 120px;
+  top: 80px;
+  width: 80%;
+  height: 160px;
+  z-index: -1;
 }
 
 #jobs .grid-image {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding-bottom: 2em;
 }
 
 /* Large devices (desktops, less than 1200px) */

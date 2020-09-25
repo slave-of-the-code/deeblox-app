@@ -13,7 +13,7 @@
   --color-light-gray-75: rgba(128, 128, 128, 0.75);
   --color-light-gray: rgba(128, 128, 128, 1);
   font-size: 16px;
-  font-family: 'Century Gothic';
+  font-family: 'Montserrat', sans-serif;
 }
 
 * {
@@ -28,11 +28,6 @@ body {
   scroll-behavior: smooth;
 }
 
-#root {
-  /* max-width: 1280px;
-  margin: 0 auto; */
-}
-
 ul {
   list-style: none;
 }
@@ -43,13 +38,8 @@ input {
 
 section {
   min-height: 100vh;
+  padding: 0.5em 0;
 }
-
-/* section,
-header {
-  max-width: 1280px;
-  margin: 0 auto;
-} */
 
 a {
   text-decoration: none;

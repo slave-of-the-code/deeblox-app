@@ -2,17 +2,21 @@
   height: 12vh;
   display: flex;
   font-size: 16px;
-  align-items: flex-end;
+  align-items: ;
   padding: 0 2em 1em 2em;
   max-width: 1368px;
-  margin: 0 auto;
   position: relative;
   width: calc(100% - 4em);
+  justify-content: flex-end;
+  margin: 0 auto;
 }
 
 .logo {
-  flex: 1;
-  font-size: 1.5em;
+  width: 200px;
+  height: 79%;
+  position: absolute;
+  left: 2em;
+  bottom: 0;
 }
 
 .link-active {
@@ -20,11 +24,11 @@
 }
 
 .nav-links {
-  flex: 1;
-  height: 100%;
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex;
   transition: all 0.5s 0s ease-in;
+  align-items: center;
+  width: 50%;
 }
 
 .nav-links > li {
@@ -42,7 +46,7 @@
   padding: 0 1em 1em 1em;
 }
 .nav-links > li:hover {
-  background: var(--color-light-gray);
+  background: var(--color-light-gray-15);
 }
 
 /* class */

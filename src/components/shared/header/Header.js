@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+import logo from '../../../assets/img-site/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -12,12 +13,15 @@ const Header = () => {
     setButtonBurgerActive(!buttonBurgerActive);
   };
 
+  const imageLogoStyle = {
+    background: `url(${logo}) no-repeat center center`,
+    backgroundSize: 'contain'
+  };
+
   return (
     <>
       <header id="header">
-        <div className="logo">
-          <h1>Deeblox</h1>
-        </div>
+        <div className="logo" style={imageLogoStyle}></div>
         <ul className={navLinksActive ? 'nav-links --active' : 'nav-links'}>
           <li>
             <Link to="/">Home</Link>

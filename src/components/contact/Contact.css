@@ -11,6 +11,16 @@
   margin-top: -0.5em;
 }
 
+#contact .container .imageEnvelope {
+  position: absolute;
+  bottom: 20px;
+  right: 140px;
+  width: 175px;
+  height: 175px;
+  z-index: -1;
+  opacity: 0.25;
+}
+
 #contact .container .contacto {
   display: flex;
   flex-direction: column;

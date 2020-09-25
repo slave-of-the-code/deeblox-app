@@ -8,6 +8,8 @@ import {
 
 import Button from '../shared/button/Button';
 import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
+
+import imageEnvelope from '../../assets/img-site/envelope.png';
 import './Contact.css';
 
 const Contact = () => {
@@ -17,6 +19,11 @@ const Contact = () => {
     { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
     { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
   ];
+  const imageEnvelopeStyle = {
+    background: `url(${imageEnvelope}) no-repeat center center`,
+    backgroundSize: 'contain'
+  };
+
   return (
     <>
       <section id="contact">
@@ -50,6 +57,7 @@ const Contact = () => {
             </div>
           </div>
           <SocialNetwork listSocialNetwork={listSocialNetwork} />
+          <div className="imageEnvelope" style={imageEnvelopeStyle}></div>
         </div>
       </section>
     </>

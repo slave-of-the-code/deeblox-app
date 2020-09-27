@@ -6,6 +6,8 @@ import AboutUs from './components/aboutUs/AboutUs';
 import Jobs from './components/jobs/Jobs';
 import Contact from './components/contact/Contact';
 
+import './DeebloxApp.css';
+
 const DeebloxApp = () => {
   return (
     <Router>
@@ -19,7 +21,6 @@ const DeebloxApp = () => {
             </>
           </Route>
           <Route path="/more-info">
-            {/* <Contact /> */}
             <>
               <h1>more info</h1>
             </>

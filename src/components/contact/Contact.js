@@ -12,56 +12,71 @@ import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
 import imageEnvelope from '../../assets/img-site/envelope.png';
 import './Contact.css';
 
-const Contact = () => {
-  const listSocialNetwork = [
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faTwitter },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
-  ];
-  const imageEnvelopeStyle = {
-    background: `url(${imageEnvelope}) no-repeat center center`,
-    backgroundSize: 'contain'
-  };
+import { Data } from '../../data/data';
 
-  return (
-    <>
-      <section id="contact">
-        <div className="container">
-          <div className="contacto">
-            <span className="title">Contacto</span>
-            <div className="inputs">
-              <div>
-                <span className="inputLabel">Nombre</span>
-                <input className="inputText"></input>
+export default class Contact extends React.Component {
+  constructor() {
+    super();
+
+    const { SocialNetwork, Contact: page } = Data;
+
+    this.state = {
+      inputs: page.inputs,
+      textArea: page.textArea,
+      mainTitle: page.mainTitle,
+      buttonSend: page.buttonSend,
+      listSocialNetwork: [
+        { url: SocialNetwork.urlTwitter, icon: faTwitter },
+        { url: SocialNetwork.urlFacebook, icon: faFacebookF },
+        { url: SocialNetwork.urlInstagram, icon: faInstagram },
+        { url: SocialNetwork.urlYoutube, icon: faYoutube }
+      ],
+      imageEnvelopeStyle: {
+        background: `url(${imageEnvelope}) no-repeat center center`,
+        backgroundSize: 'contain'
+      }
+    };
+  }
+
+  render() {
+    const {
+      mainTitle,
+      inputs,
+      textArea,
+      buttonSend,
+      listSocialNetwork,
+      imageEnvelopeStyle
+    } = this.state;
+
+    return (
+      <>
+        <section id="contact">
+          <div className="container">
+            <div className="contacto">
+              <span className="title">{mainTitle}</span>
+              <div className="inputs">
+                {inputs.map((input, index) => {
+                  return (
+                    <div key={index}>
+                      <span className="inputLabel">{input.title}</span>
+                      <input className="inputText"></input>
+                    </div>
+                  );
+                })}
               </div>
-              <div>
-                <span className="inputLabel">Apellido</span>
-                <input className="inputText"></input>
+              <div className="input-textarea">
+                <span className="inputLabel">{textArea.title}</span>
+                <textarea className="inputTextArea"></textarea>
               </div>
-              <div>
-                <span className="inputLabel">Email</span>
-                <input className="inputText"></input>
-              </div>
-              <div>
-                <span className="inputLabel">Telefono</span>
-                <input className="inputText"></input>
+              <div className="button-Send">
+                <Button text={buttonSend.text} />
               </div>
             </div>
-            <div className="input-textarea">
-              <span className="inputLabel">Mensaje</span>
-              <textarea className="inputTextArea"></textarea>
-            </div>
-            <div className="button-Send">
-              <Button text="Enviar" />
-            </div>
+            <SocialNetwork listSocialNetwork={listSocialNetwork} />
+            <div className="imageEnvelope" style={imageEnvelopeStyle}></div>
           </div>
-          <SocialNetwork listSocialNetwork={listSocialNetwork} />
-          <div className="imageEnvelope" style={imageEnvelopeStyle}></div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default Contact;
+        </section>
+      </>
+    );
+  }
+}

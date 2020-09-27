@@ -15,53 +15,62 @@ import {
 import SocialNetwork from '../socialNetwork/SocialNetwork';
 import './Footer.css';
 
-const Footer = () => {
-  const listSocialNetwork = [
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faTwitter },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
-  ];
-  return (
-    <>
-      <footer id="footer">
-        <div className="data">
-          <div className="container-detail-data">
-            <ul>
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faPhoneAlt} /> +54 11 2821 9000
-                </span>
-              </li>
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faEnvelope} /> contact@deeblox.com
-                </span>
-              </li>
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> Avda. Ricardo Balbín
-                  2437 - CABA - Buenos Aires.
-                </span>
-              </li>
-            </ul>
-          </div>
-          <div className="container-social-network">
-            <SocialNetwork listSocialNetwork={listSocialNetwork} /> /Deeblox
-          </div>
-        </div>
-        <div className="info">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            vulputate at felis sed condimentum. Curabitur lorem nunc, dictum at
-            nulla dictum, tempus tristique tortor. Nulla facilisi. Nullam mollis
-            ligula a ullamcorper ultricies. Nulla odio est, facilisis sed mauris
-            id, malesuada gravida ipsum.
-          </p>
-        </div>
-      </footer>
-    </>
-  );
-};
+import { Data } from '../../../data/data';
 
-export default Footer;
+export default class Footer extends React.Component {
+  constructor() {
+    super();
+
+    const { SocialNetwork, Footer: pageData } = Data;
+
+    this.state = {
+      pageData: pageData,
+      listSocialNetwork: [
+        { url: SocialNetwork.urlTwitter, icon: faTwitter },
+        { url: SocialNetwork.urlFacebook, icon: faFacebookF },
+        { url: SocialNetwork.urlInstagram, icon: faInstagram },
+        { url: SocialNetwork.urlYoutube, icon: faYoutube }
+      ]
+    };
+  }
+
+  render() {
+    const { pageData, listSocialNetwork } = this.state;
+    const { cellPhone, email, address, companyName, paragraph } = pageData;
+
+    return (
+      <>
+        <footer id="footer">
+          <div className="data">
+            <div className="container-detail-data">
+              <ul>
+                <li>
+                  <span>
+                    <FontAwesomeIcon icon={faPhoneAlt} /> {cellPhone}
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <FontAwesomeIcon icon={faEnvelope} /> {email}
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    <FontAwesomeIcon icon={faMapMarkerAlt} /> {address}
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div className="container-social-network">
+              <SocialNetwork listSocialNetwork={listSocialNetwork} /> /
+              {companyName}
+            </div>
+          </div>
+          <div className="info">
+            <p>{paragraph}</p>
+          </div>
+        </footer>
+      </>
+    );
+  }
+}

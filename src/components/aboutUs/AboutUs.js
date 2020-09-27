@@ -12,50 +12,60 @@ import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
 
 import aboutUs from '../../assets/img-web/aboutUs.png';
 import plane from '../../assets/img-site/plane.png';
+
 import './AboutUs.css';
 
-const AboutUs = () => {
-  const imgStyle = {
-    background: `url(${aboutUs}) no-repeat right center`,
-    backgroundSize: 'contain'
-  };
-  const imgEnvelopeStyle = {
-    background: `url(${plane}) no-repeat center bottom`,
-    backgroundSize: 'contain'
-  };
-  const listSocialNetwork = [
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faTwitter },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
-    { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
-  ];
-  return (
-    <>
-      <section id="aboutUs">
-        <div className="container">
-          <div className="info">
-            <div className="title">
-              <div style={imgEnvelopeStyle} className="imagePlane"></div>
-              <span>Soluciones</span>
-              <span>Ágiles</span>
-            </div>
-            <p className="text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              vulputate at felis sed condimentum. Curabitur lorem nunc, dictum
-              at nulla dictum, tempus tristique tortor. Nulla facilisi. Nullam
-              mollis ligula a ullamcorper ultricies. Nulla odio est, facilisis
-              sed mauris id, malesuada gravida ipsum.
-            </p>
-            <Link to="/more-info" className="moreInfoButton">
-              <Button text="Mas info" />
-            </Link>
-          </div>
-          <div className="image" style={imgStyle}></div>
-          <SocialNetwork listSocialNetwork={listSocialNetwork} />
-        </div>
-      </section>
-    </>
-  );
-};
+import { Data } from '../../data/data';
 
-export default AboutUs;
+export default class AboutUs extends React.Component {
+  constructor() {
+    super();
+
+    const { SocialNetwork } = Data;
+
+    this.state = {
+      imgStyle: {
+        background: `url(${aboutUs}) no-repeat right center`,
+        backgroundSize: 'contain'
+      },
+      imgEnvelopeStyle: {
+        background: `url(${plane}) no-repeat center bottom`,
+        backgroundSize: 'contain'
+      },
+      listSocialNetwork: [
+        { url: SocialNetwork.urlTwitter, icon: faTwitter },
+        { url: SocialNetwork.urlFacebook, icon: faFacebookF },
+        { url: SocialNetwork.urlInstagram, icon: faInstagram },
+        { url: SocialNetwork.urlYoutube, icon: faYoutube }
+      ]
+    };
+  }
+
+  render() {
+    const { AboutUs: dataAboutUS } = Data;
+    const { title, subTitle, paragraph, textButton } = dataAboutUS;
+
+    const { imgEnvelopeStyle, imgStyle, listSocialNetwork } = this.state;
+    return (
+      <>
+        <section id="aboutUs">
+          <div className="container">
+            <div className="info">
+              <div className="title">
+                <div style={imgEnvelopeStyle} className="imagePlane"></div>
+                <span>{title}</span>
+                <span>{subTitle}</span>
+              </div>
+              <p className="text">{paragraph}</p>
+              <Link to="/more-info" className="moreInfoButton">
+                <Button text={textButton} />
+              </Link>
+            </div>
+            <div className="image" style={imgStyle}></div>
+            <SocialNetwork listSocialNetwork={listSocialNetwork} />
+          </div>
+        </section>
+      </>
+    );
+  }
+}

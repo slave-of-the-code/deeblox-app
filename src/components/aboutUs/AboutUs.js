@@ -21,6 +21,8 @@ export default class AboutUs extends React.Component {
   constructor() {
     super();
 
+    const { SocialNetwork } = Data;
+
     this.state = {
       imgStyle: {
         background: `url(${aboutUs}) no-repeat right center`,
@@ -31,17 +33,16 @@ export default class AboutUs extends React.Component {
         backgroundSize: 'contain'
       },
       listSocialNetwork: [
-        { url: 'https://www.linkedin.com/in/gustavoml/', icon: faTwitter },
-        { url: 'https://www.linkedin.com/in/gustavoml/', icon: faFacebookF },
-        { url: 'https://www.linkedin.com/in/gustavoml/', icon: faInstagram },
-        { url: 'https://www.linkedin.com/in/gustavoml/', icon: faYoutube }
+        { url: SocialNetwork.urlTwitter, icon: faTwitter },
+        { url: SocialNetwork.urlFacebook, icon: faFacebookF },
+        { url: SocialNetwork.urlInstagram, icon: faInstagram },
+        { url: SocialNetwork.urlYoutube, icon: faYoutube }
       ]
     };
   }
 
   render() {
     const { AboutUs: dataAboutUS } = Data;
-
     const { title, subTitle, paragraph, textButton } = dataAboutUS;
 
     const { imgEnvelopeStyle, imgStyle, listSocialNetwork } = this.state;

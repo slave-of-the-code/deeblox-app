@@ -1,56 +1,64 @@
 import React from 'react';
 import ContainerImages from '../shared/containerImages/ContainerImages';
 
-import img1 from '../../assets/img-web/chicapunkweb.png';
-import img2 from '../../assets/img-web/rulosprogramandoweb.png';
-import img3 from '../../assets/img-web/manorelojWEB.png';
-import img4 from '../../assets/img-web/appleweb.png';
-
 import imageCircle from '../../assets/img-site/circle.png';
 import imageArrow from '../../assets/img-site/arrow.png';
 
 import './Jobs.css';
 
-const Jobs = () => {
-  const listImage = [
-    { url: img1, isAlignRight: true },
-    { url: img2, isAlignRight: false },
-    { url: img3, isAlignRight: true },
-    { url: img4, isAlignRight: false }
-  ];
+import { Data } from '../../data/data';
 
-  const imageCircleStyle = {
-    background: `url(${imageCircle}) no-repeat center top`,
-    backgroundSize: 'contain'
-  };
+export default class Jobs extends React.Component {
+  constructor() {
+    super();
 
-  const imageArrowStyle = {
-    background: `url(${imageArrow}) no-repeat center right`,
-    backgroundSize: 'contain'
-  };
+    const { Jobs: page } = Data;
 
-  return (
-    <>
-      <section id="jobs">
-        <div className="container">
-          <span>Nuestros Servicios</span>
-          <div className="grid-image">
-            {listImage.map((img, index) => {
-              return (
-                <ContainerImages
-                  url={img.url}
-                  isAlignRight={img.isAlignRight}
-                  key={index}
-                />
-              );
-            })}
+    this.state = {
+      mainTitle: page.mainTitle,
+      listImage: page.images,
+      imageCircleStyle: {
+        background: `url(${imageCircle}) no-repeat center top`,
+        backgroundSize: 'contain'
+      },
+      imageArrowStyle: {
+        background: `url(${imageArrow}) no-repeat center right`,
+        backgroundSize: 'contain'
+      }
+    };
+  }
+
+  render() {
+    const {
+      listImage,
+      imageCircleStyle,
+      imageArrowStyle,
+      mainTitle
+    } = this.state;
+
+    return (
+      <>
+        <section id="jobs">
+          <div className="container">
+            <span>{mainTitle}</span>
+            <div className="grid-image">
+              {listImage.map(({ url, isAlignRight, title, text }, index) => {
+                return (
+                  <ContainerImages
+                    url={url}
+                    isAlignRight={isAlignRight}
+                    key={index}
+                    title={title}
+                    text={text}
+                  />
+                );
+              })}
+            </div>
+            <div className="imageCircle" style={imageCircleStyle}></div>
+            <div className="imageArrow" style={imageArrowStyle}></div>
           </div>
-          <div className="imageCircle" style={imageCircleStyle}></div>
-          <div className="imageArrow" style={imageArrowStyle}></div>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default Jobs;
+        </section>
+      </>
+    );
+  }
+}

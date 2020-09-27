@@ -11,6 +11,7 @@ import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
 
 import imageEnvelope from '../../assets/img-site/envelope.png';
 import './Contact.css';
+
 import { Data } from '../../data/data';
 
 export default class Contact extends React.Component {

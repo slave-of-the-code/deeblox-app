@@ -33,7 +33,7 @@
   margin: 0 auto;
 }
 
-#contact .container .contacto > .title {
+#contact .container .contacto .title {
   margin: 1em 0;
   flex: 1;
   display: flex;
@@ -41,7 +41,7 @@
   justify-content: flex-end;
 }
 
-#contact .container .contacto > .button-Send {
+#contact .container .contacto .button-Send {
   padding: 1.5em 0;
   flex: 1;
 }
@@ -54,7 +54,7 @@
   color: var(--color-light-gray);
 }
 
-#contact .container .contacto > div {
+#contact .container .contacto form > div {
   font-size: 0.5em;
   width: 100%;
 }

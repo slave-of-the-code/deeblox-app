@@ -2,9 +2,9 @@ import React from 'react';
 
 import './Button.css';
 
-const Button = ({ text }) => (
+const Button = ({ text, type }) => (
   <>
-    <input type="submit" value={text} className="button"></input>
+    <input type={type} value={text} className="button"></input>
   </>
 );
 

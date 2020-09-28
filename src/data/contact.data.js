@@ -1,15 +1,18 @@
 export const Contact_Data = {
   mainTitle: 'Contacto',
   inputs: [
-    { title: 'Nombre' },
-    { title: 'Apellido' },
-    { title: 'Email' },
-    { title: 'Telefono' }
+    { name: 'firstName', title: 'Nombre', value: '' },
+    { name: 'surName', title: 'Apellido', value: '' },
+    { name: 'emailAddress', title: 'Email', value: '' },
+    { name: 'phone', title: 'Telefono', value: '' }
   ],
   textArea: {
-    title: 'Mensaje'
+    name: 'message',
+    title: 'Mensaje',
+    value: ''
   },
   buttonSend: {
+    type: 'submit',
     text: 'Enviar'
   }
 };

@@ -6,10 +6,10 @@ import { Footer_Data } from './footer.data';
 
 const data = {
   socialNetwork: {
-    urlFacebook: 'wwww.facebook.com',
-    urlTwitter: 'wwww.twitter.com',
-    urlInstagram: 'wwww.instagram.com',
-    urlYoutube: 'wwww.youtube.com'
+    urlFacebook: 'https://www.facebook.com/',
+    urlTwitter: 'https://www.twitter.com',
+    urlInstagram: 'https://www.instagram.com',
+    urlYoutube: 'https://www.youtube.com'
   },
   pages: {
     aboutUs: AboutUs_Data,

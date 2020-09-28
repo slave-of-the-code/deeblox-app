@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import './SocialNetwork.css';
@@ -10,9 +9,9 @@ const SocialNetwork = ({ listSocialNetwork }) => (
       {listSocialNetwork.map((item, index) => {
         return (
           <li key={index}>
-            <Link to={item.url} target="_blank">
+            <a target="_blank" rel="noopener noreferrer" href={item.url}>
               <FontAwesomeIcon icon={item.icon} />
-            </Link>
+            </a>
           </li>
         );
       })}

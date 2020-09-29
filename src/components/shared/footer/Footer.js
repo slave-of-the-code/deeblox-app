@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faEnvelope,
@@ -18,7 +17,7 @@ import './Footer.css';
 
 import { Data } from '../../../data/data';
 
-const Footer = (props) => {
+const Footer = () => {
   const { SocialNetwork: socialNetworkData, Footer: pageData } = Data;
 
   const listSocialNetwork = [

@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 
 import {
@@ -17,8 +16,8 @@ import './Contact.css';
 
 import { Data } from '../../data/data';
 
-const Contact = (props) => {
-  const { register, handleSubmit, watch, errors } = useForm();
+const Contact = () => {
+  const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     console.table(data);
   };

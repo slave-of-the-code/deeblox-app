@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import ContainerImages from '../shared/containerImages/ContainerImages';
 
 import imageCircle from '../../assets/img-site/circle.png';
@@ -9,7 +8,7 @@ import './Jobs.css';
 
 import { Data } from '../../data/data';
 
-const Jobs = (props) => {
+const Jobs = () => {
   const { Jobs: page } = Data;
   const mainTitle = page.mainTitle;
   const listImage = page.images;

@@ -17,55 +17,48 @@ import './AboutUs.css';
 
 import { Data } from '../../data/data';
 
-export default class AboutUs extends React.Component {
-  constructor() {
-    super();
+const AboutUs = () => {
+  const { SocialNetwork: socialNetworkData } = Data;
 
-    const { SocialNetwork } = Data;
+  const imgStyle = {
+    background: `url(${aboutUs}) no-repeat right center`,
+    backgroundSize: 'contain'
+  };
+  const imgEnvelopeStyle = {
+    background: `url(${plane}) no-repeat center bottom`,
+    backgroundSize: 'contain'
+  };
+  const listSocialNetwork = [
+    { url: socialNetworkData.urlTwitter, icon: faTwitter },
+    { url: socialNetworkData.urlFacebook, icon: faFacebookF },
+    { url: socialNetworkData.urlInstagram, icon: faInstagram },
+    { url: socialNetworkData.urlYoutube, icon: faYoutube }
+  ];
 
-    this.state = {
-      imgStyle: {
-        background: `url(${aboutUs}) no-repeat right center`,
-        backgroundSize: 'contain'
-      },
-      imgEnvelopeStyle: {
-        background: `url(${plane}) no-repeat center bottom`,
-        backgroundSize: 'contain'
-      },
-      listSocialNetwork: [
-        { url: SocialNetwork.urlTwitter, icon: faTwitter },
-        { url: SocialNetwork.urlFacebook, icon: faFacebookF },
-        { url: SocialNetwork.urlInstagram, icon: faInstagram },
-        { url: SocialNetwork.urlYoutube, icon: faYoutube }
-      ]
-    };
-  }
+  const { AboutUs: dataAboutUS } = Data;
+  const { title, subTitle, paragraph, textButton } = dataAboutUS;
 
-  render() {
-    const { AboutUs: dataAboutUS } = Data;
-    const { title, subTitle, paragraph, textButton } = dataAboutUS;
-
-    const { imgEnvelopeStyle, imgStyle, listSocialNetwork } = this.state;
-    return (
-      <>
-        <section id="aboutUs">
-          <div className="container">
-            <div className="info">
-              <div className="title">
-                <div style={imgEnvelopeStyle} className="imagePlane"></div>
-                <span>{title}</span>
-                <span>{subTitle}</span>
-              </div>
-              <p className="text">{paragraph}</p>
-              <Link to="/more-info" className="moreInfoButton">
-                <Button text={textButton} />
-              </Link>
+  return (
+    <>
+      <section id="aboutUs">
+        <div className="container">
+          <div className="info">
+            <div className="title">
+              <div style={imgEnvelopeStyle} className="imagePlane"></div>
+              <span>{title}</span>
+              <span>{subTitle}</span>
             </div>
-            <div className="image" style={imgStyle}></div>
-            <SocialNetwork listSocialNetwork={listSocialNetwork} />
+            <p className="text">{paragraph}</p>
+            <Link to="/more-info" className="moreInfoButton">
+              <Button text={textButton} />
+            </Link>
           </div>
-        </section>
-      </>
-    );
-  }
-}
+          <div className="image" style={imgStyle}></div>
+          <SocialNetwork listSocialNetwork={listSocialNetwork} />
+        </div>
+      </section>
+    </>
+  );
+};
+
+export default AboutUs;

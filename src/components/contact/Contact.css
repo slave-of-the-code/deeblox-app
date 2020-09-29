@@ -35,7 +35,6 @@
 
 #contact .container .contacto .title {
   margin: 1em 0;
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -73,40 +72,36 @@
 
 #contact .container .contacto .inputs > div {
   display: flex;
-  width: 40%;
+  width: 45%;
   flex-direction: column;
   margin: 1em 0;
 }
 
 #contact .inputText {
-  border-style: none;
-  padding: 1em 0;
+  padding: 1em 0.5em;
   min-width: 200px;
-  border-bottom: 1px solid var(--color-orange);
-  background: transparent;
   outline: none;
 }
 
 #contact .container .contacto .inputTextArea {
-  border-style: none;
-  padding: 1em 0;
+  padding: 1em 0.5em;
   margin: 1em 0;
   resize: none;
   min-height: 150px;
-  border-bottom: 1px solid var(--color-orange);
-  background: transparent;
   outline: none;
   height: 100%;
 }
 
-#contact .inputs > input {
-  margin: 1em 0;
-  width: 40%;
+.valid {
+  border-style: none;
+  border-bottom: 1px solid var(--color-orange);
+  background: transparent;
 }
 
-#contact .inputs > textarea {
-  margin: 1em 0;
-  height: 30vh;
+.isInvalid {
+  border-style: none;
+  border-bottom: 1px solid rgba(255, 0, 0, 1);
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.15), transparent);
 }
 
 /* Large devices (desktops, less than 1200px) */

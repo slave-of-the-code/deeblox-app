@@ -68,16 +68,23 @@
   transform: translateX(0%);
 }
 
-/* Large devices (desktops, less than 1200px) */
-@media screen and (max-width: 1368px) {
+/* Large devices (desktops, less than 1366px) */
+@media screen and (max-width: 1366px) {
 }
 
-/* Large devices (desktops, less than 1200px) */
-@media screen and (max-width: 1200px) {
+/* Large devices (desktops, less than 1280px) */
+@media screen and (max-width: 1280px) {
 }
 
-/* Medium devices (tablets, less than 992px) */
-@media screen and (max-width: 992px) {
+/* Medium devices (tablets, less than 1024px) */
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 60%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 768px) {
   .button-burguer {
     display: block;
     cursor: pointer;
@@ -112,10 +119,6 @@
     align-items: center;
     padding: 0;
   }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media screen and (max-width: 768px) {
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

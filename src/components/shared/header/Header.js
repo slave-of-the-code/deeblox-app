@@ -32,7 +32,9 @@ const Header = (props) => {
   return (
     <>
       <header id="header">
-        <div className="logo" style={imageLogoStyle}></div>
+        <div className="logo" style={imageLogoStyle}>
+          <h3>mobile version</h3>
+        </div>
         <ul
           className={state.navLinksActive ? 'nav-links --active' : 'nav-links'}
         >

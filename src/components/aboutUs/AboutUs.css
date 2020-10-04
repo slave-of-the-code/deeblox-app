@@ -6,7 +6,7 @@
 
 #aboutUs .container {
   display: flex;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   margin-top: -0.5em;
 }
@@ -20,6 +20,7 @@
 }
 
 #aboutUs .container .info {
+  position: relative;
   flex: 1.5;
   display: flex;
   flex-direction: column;
@@ -89,6 +90,51 @@
 
 /* Small devices (landscape phones, less than 768px) */
 @media screen and (max-width: 768px) {
+  #aboutUs .container {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  #aboutUs .container .info {
+    flex: none;
+    padding: 0 3em;
+    margin-bottom: 1em;
+  }
+
+  #aboutUs .container .info .title,
+  #aboutUs .container .info .text {
+    flex: 0;
+    padding: 1em 0;
+    flex: none;
+  }
+
+  #aboutUs .container .info .title {
+    padding: 0;
+  }
+
+  #aboutUs .container .info .title > .imagePlane {
+    height: 140%;
+    top: 25px;
+    right: 10px;
+    left: auto;
+  }
+
+  #aboutUs .container .info .moreInfoButton {
+    width: fit-content;
+    margin: 1em 0;
+  }
+
+  #aboutUs .container .image {
+    flex: auto;
+    width: 80%;
+    margin: 0 auto;
+    background-position-x: center !important;
+  }
+
+  #aboutUs .container .socialNetwork {
+    right: 85px;
+    transform: translateY(77vh);
+  }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

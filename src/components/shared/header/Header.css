@@ -59,13 +59,24 @@
 .button-burguer > div {
   width: 25px;
   height: 5px;
-  background: var(--color-light-gray);
+  background: var(--color-orange-dark);
   margin: 3px;
   transition: all 0.25s 0s ease-in;
 }
 
 .nav-links.--active {
-  transform: translateX(0%);
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.line1.--toggle {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+.line2.--toggle {
+  opacity: 0;
+}
+.line3.--toggle {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Large devices (desktops, less than 1366px) */
@@ -85,37 +96,72 @@
 
 /* Small devices (landscape phones, less than 768px) */
 @media screen and (max-width: 768px) {
-  .button-burguer {
-    display: block;
-    cursor: pointer;
-  }
-
   body {
     overflow-x: hidden;
   }
 
+  #header {
+    padding: 0;
+    width: 100%;
+    /* position: fixed; */
+    z-index: 1;
+    background: var(--color-white-to-bottom);
+  }
+
+  /* #root > #container > #content > section {
+    margin-top: 12vh;
+  } */
+
+  .button-burguer {
+    display: block;
+    cursor: pointer;
+    top: 35%;
+    right: 2em;
+  }
+
   .nav-links {
-    position: absolute;
-    top: calc(12vh + 1em);
-    right: 0;
-    height: 88vh;
-    width: 60%;
-    background: var(--color-white-top-bottom);
     flex-direction: column;
-    align-items: center;
-    transform: translateX(100%);
+    width: 100vw;
+    margin-top: 12vh;
+    height: 88vh;
+    z-index: 1;
+    justify-content: space-around;
+    background: var(--color-white-75);
+    border-top: 2px solid var(--color-orange-dark);
+    color: var(--color-white);
+    font-size: 2em;
+    letter-spacing: 10px;
+    opacity: 0;
+    transform: translateX(-100%);
   }
 
   .nav-links > li {
     width: 100%;
-    border-radius: 0;
     padding: 0;
+    border-radius: 0;
     transform: none;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    border-style: none;
+    padding: 0;
+    /* background: var(--color-orange-dark-to-right); */
+    background: var(--color-orange-transparent-middle);
+  }
+
+  .nav-links > li:hover {
+    background: var(--color-white);
+    color: var(--color-orange-dark);
   }
 
   .nav-links > li > a {
-    flex-direction: row;
+    display: flex;
+    height: 100%;
+    width: 90%;
+    border-bottom: 2px solid var(--color-orange-dark);
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     padding: 0;
   }
@@ -123,14 +169,4 @@
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 576px) {
-}
-
-.line1.--toggle {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
-.line2.--toggle {
-  opacity: 0;
-}
-.line3.--toggle {
-  transform: rotate(45deg) translate(-5px, -6px);
 }

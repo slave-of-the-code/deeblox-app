@@ -8,6 +8,7 @@
 }
 
 #jobs .container {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -83,6 +84,22 @@
 
 /* Small devices (landscape phones, less than 768px) */
 @media screen and (max-width: 768px) {
+  #jobs .container > .imageCircle {
+    left: 125px;
+    top: 55px;
+    width: 90px;
+  }
+
+  #jobs .container > .imageArrow {
+    right: 100px;
+    top: 70px;
+    width: 55%;
+    height: 80px;
+  }
+
+  #jobs .container > span {
+    padding: 0;
+  }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */

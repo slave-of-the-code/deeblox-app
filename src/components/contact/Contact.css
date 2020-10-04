@@ -4,7 +4,7 @@
 }
 
 #contact .container {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   max-width: 1368px;
   margin: 0 auto;
@@ -133,8 +133,12 @@
     width: 100%;
   }
 
-  #contact .container {
-    position: relative;
+  #contact .container .socialNetwork {
+    right: 2.5%;
+  }
+
+  #contact .container .imageEnvelope {
+    right: 0;
   }
 }
 

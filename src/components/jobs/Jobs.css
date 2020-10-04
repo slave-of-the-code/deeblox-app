@@ -102,6 +102,18 @@
   }
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media screen and (max-width: 576px) {
+/* Extra small devices (portrait phones, less than 640px) */
+@media screen and (max-width: 640px) {
+  #jobs .container > .imageCircle {
+    left: 80px;
+    top: 55px;
+    width: 80px;
+  }
+
+  #jobs .container > .imageArrow {
+    right: 45px;
+    top: 60px;
+    width: 65%;
+    height: 80px;
+  }
 }

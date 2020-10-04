@@ -137,6 +137,11 @@
   }
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media screen and (max-width: 576px) {
+/* Extra small devices (portrait phones, less than 640px) */
+@media screen and (max-width: 640px) {
+  #aboutUs .container .socialNetwork {
+    right: 105px;
+    transform: translateY(80vh);
+    color: var(--color-light-gray-75);
+  }
 }

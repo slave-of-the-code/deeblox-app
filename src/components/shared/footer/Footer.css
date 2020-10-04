@@ -93,6 +93,26 @@
 @media screen and (max-width: 768px) {
 }
 
+/* Small devices (landscape phones, less than 640px) */
+@media screen and (max-width: 640px) {
+  #footer {
+    padding: 1.5em 1.5em 0.5em 1.5em;
+  }
+  #footer .data {
+    flex-direction: column;
+  }
+  #footer .data .container-social-network {
+    align-items: center;
+    height: 30px;
+    padding: 1em 0;
+  }
+  #footer .data .container-social-network .socialNetwork {
+    align-items: center;
+    height: auto;
+    width: 15%;
+  }
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 576px) {
 }

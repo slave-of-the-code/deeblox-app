@@ -142,6 +142,22 @@
   }
 }
 
+@media screen and (max-width: 640px) {
+  #contact .container .contacto {
+    width: 85%;
+  }
+
+  #contact .container .socialNetwork {
+    right: -3%;
+  }
+
+  #contact .container .imageEnvelope {
+    width: 150px;
+    height: 155px;
+    right: -20px;
+  }
+}
+
 /* Extra small devices (portrait phones, less than 576px) */
 @media screen and (max-width: 576px) {
   #contact {

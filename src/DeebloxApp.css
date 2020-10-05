@@ -1,12 +1,25 @@
 :root {
   --color-orange-dark: rgb(255, 135, 0);
   --color-orange: rgb(255, 165, 0);
+  --color-orange-transparent-middle: rgba(255, 165, 0, 0.65);
   --color-white: rgb(255, 255, 255);
   --color-white-75: rgb(255, 255, 255, 0.75);
   --color-white-top-bottom: linear-gradient(
     to bottom,
     rgb(255, 255, 255, 1),
     rgb(255, 255, 255, 0.75)
+  );
+  --color-orange-dark-to-right: linear-gradient(
+    to right,
+    rgb(255, 135, 0),
+    rgba(255, 255, 255, 0.95)
+  );
+  --color-white-to-bottom: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0.5),
+    transparent
   );
   --color-black: rgb(0, 0, 0);
   --color-light-gray-15: rgba(128, 128, 128, 0.15);

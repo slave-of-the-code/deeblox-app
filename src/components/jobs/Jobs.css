@@ -8,6 +8,7 @@
 }
 
 #jobs .container {
+  height: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -48,22 +49,87 @@
   padding-bottom: 2em;
 }
 
-/* Large devices (desktops, less than 1200px) */
-@media screen and (max-width: 1368px) {
+/* Large devices (desktops, less than 1366px) */
+@media screen and (max-width: 1366px) {
 }
 
-/* Large devices (desktops, less than 1200px) */
-@media screen and (max-width: 1200px) {
+/* Large devices (desktops, less than 1280px) */
+@media screen and (max-width: 1280px) {
+  #jobs .container > .imageCircle {
+    left: 125px;
+    top: 85px;
+  }
+  #jobs .container > .imageArrow {
+    right: 60px;
+  }
 }
 
-/* Medium devices (tablets, less than 992px) */
-@media screen and (max-width: 992px) {
+/* Medium devices (tablets, less than 1024px) */
+@media screen and (max-width: 1024px) {
+  .image-container {
+    margin: 1em 1.5em;
+  }
+
+  #jobs .container > .imageCircle {
+    left: 40px;
+    top: 85px;
+  }
+
+  #jobs .container > .imageArrow {
+    right: 5px;
+    top: 80px;
+    width: 65%;
+  }
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media screen and (max-width: 768px) {
+  #jobs .container > .imageCircle {
+    left: 125px;
+    top: 55px;
+    width: 90px;
+  }
+
+  #jobs .container > .imageArrow {
+    right: 100px;
+    top: 70px;
+    width: 55%;
+    height: 80px;
+  }
+
+  #jobs .container > span {
+    padding: 0;
+  }
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media screen and (max-width: 576px) {
+/* Extra small devices (portrait phones, less than 640px) */
+@media screen and (max-width: 640px) {
+  #jobs .container > .imageCircle {
+    left: 80px;
+    top: 55px;
+    width: 80px;
+  }
+
+  #jobs .container > .imageArrow {
+    right: 45px;
+    top: 60px;
+    width: 65%;
+    height: 80px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 480px) */
+@media screen and (max-width: 480px) {
+  #jobs .container > .imageCircle {
+    left: 15px;
+  }
+
+  #jobs .container > .imageArrow {
+    right: 25px;
+    top: 40px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 320px) */
+@media screen and (max-width: 320px) {
 }

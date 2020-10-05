@@ -6,7 +6,7 @@
 
 #aboutUs .container {
   display: flex;
-  min-height: 100vh;
+  height: 100%;
   position: relative;
   margin-top: -0.5em;
 }
@@ -146,6 +146,10 @@
 }
 
 @media screen and (max-width: 480px) {
+  #aboutUs {
+    height: 88vh;
+  }
+
   #aboutUs .container .socialNetwork {
     right: 20px;
     transform: translateY(70vh);
@@ -155,9 +159,11 @@
   #aboutUs .container .info {
     justify-content: flex-start;
   }
+
   #aboutUs .container .info .moreInfoButton {
     flex: none;
   }
+
   #aboutUs .container .info .title > .imagePlane {
     height: 115%;
     top: 25px;

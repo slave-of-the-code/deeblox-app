@@ -4,7 +4,7 @@
 }
 
 #contact .container {
-  min-height: 100vh;
+  height: 100%;
   position: relative;
   max-width: 1368px;
   margin: 0 auto;
@@ -162,6 +162,14 @@
 @media screen and (max-width: 480px) {
   #contact {
     padding: 0 1em;
+  }
+
+  #contact .container .contacto .title {
+    margin: 0.25em 0;
+  }
+
+  #contact .container .contacto .button-Send {
+    padding: 0.5em 0 1.5em 0;
   }
 }
 

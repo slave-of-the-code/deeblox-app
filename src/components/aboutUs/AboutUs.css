@@ -140,8 +140,31 @@
 /* Extra small devices (portrait phones, less than 640px) */
 @media screen and (max-width: 640px) {
   #aboutUs .container .socialNetwork {
-    right: 105px;
-    transform: translateY(80vh);
+    right: 75px;
+    transform: translateY(75vh);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #aboutUs .container .socialNetwork {
+    right: 20px;
+    transform: translateY(70vh);
     color: var(--color-light-gray-75);
   }
+
+  #aboutUs .container .info {
+    justify-content: flex-start;
+  }
+  #aboutUs .container .info .moreInfoButton {
+    flex: none;
+  }
+  #aboutUs .container .info .title > .imagePlane {
+    height: 115%;
+    top: 25px;
+    right: -15px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 320px) */
+@media screen and (max-width: 320px) {
 }

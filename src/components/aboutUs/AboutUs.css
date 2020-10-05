@@ -6,7 +6,7 @@
 
 #aboutUs .container {
   display: flex;
-  height: 100%;
+  height: 100vh;
   position: relative;
   margin-top: -0.5em;
 }
@@ -93,6 +93,7 @@
   #aboutUs .container {
     flex-direction: column;
     margin: 0;
+    height: 88vh;
   }
 
   #aboutUs .container .info {
@@ -133,7 +134,7 @@
 
   #aboutUs .container .socialNetwork {
     right: 85px;
-    transform: translateY(77vh);
+    transform: translateY(70vh);
   }
 }
 

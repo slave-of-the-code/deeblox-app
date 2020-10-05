@@ -27,6 +27,10 @@ const Header = (props) => {
       navLinksActive: !prevState.navLinksActive,
       buttonBurgerActive: !prevState.buttonBurgerActive
     }));
+
+    state.navLinksActive
+      ? document.querySelector('body').classList.remove('overflow-hidden')
+      : document.querySelector('body').classList.add('overflow-hidden');
   };
 
   return (

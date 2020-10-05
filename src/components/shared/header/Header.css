@@ -69,6 +69,10 @@
   transform: translateX(0);
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .line1.--toggle {
   transform: rotate(-45deg) translate(-5px, 6px);
 }
@@ -108,7 +112,6 @@
     background: var(--color-white-to-bottom);
   }
 
-  #root > #container > #content,
   #root > #container > #content > section {
     padding-top: 12vh;
   }

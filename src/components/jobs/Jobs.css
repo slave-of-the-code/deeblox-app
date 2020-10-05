@@ -84,11 +84,6 @@
 
 /* Small devices (landscape phones, less than 768px) */
 @media screen and (max-width: 768px) {
-  /* #jobs .container {
-    height: 88vh;
-    min-height: 768px;
-  } */
-
   #jobs .container > .imageCircle {
     left: 125px;
     top: 55px;

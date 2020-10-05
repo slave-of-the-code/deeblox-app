@@ -158,9 +158,13 @@
   }
 }
 
-/* Extra small devices (portrait phones, less than 576px) */
-@media screen and (max-width: 576px) {
+/* Extra small devices (portrait phones, less than 480px) */
+@media screen and (max-width: 480px) {
   #contact {
     padding: 0 1em;
   }
+}
+
+/* Extra small devices (portrait phones, less than 320px) */
+@media screen and (max-width: 320px) {
 }

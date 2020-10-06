@@ -9,6 +9,7 @@ import './Header.css';
 import { Data } from '../../../data/data';
 
 const Header = (props) => {
+  const $body = document.querySelector('body');
   const { Header: page } = Data;
 
   const imageLogoStyle = {
@@ -28,9 +29,16 @@ const Header = (props) => {
       buttonBurgerActive: !prevState.buttonBurgerActive
     }));
 
-    state.navLinksActive
-      ? document.querySelector('body').classList.remove('overflow-hidden')
-      : document.querySelector('body').classList.add('overflow-hidden');
+    $body.classList.remove('overflow-hidden');
+  };
+
+  const toggleMenuButton = (e) => {
+    setState((prevState) => ({
+      navLinksActive: !prevState.navLinksActive,
+      buttonBurgerActive: !prevState.buttonBurgerActive
+    }));
+
+    !state.navLinksActive && $body.classList.add('overflow-hidden');
   };
 
   return (
@@ -61,7 +69,7 @@ const Header = (props) => {
             return linkRender;
           })}
         </ul>
-        <div className="button-burguer" onClick={toggleMenu}>
+        <div className="button-burguer" onClick={toggleMenuButton}>
           <div
             className={state.buttonBurgerActive ? 'line1 --toggle' : 'line1'}
           ></div>

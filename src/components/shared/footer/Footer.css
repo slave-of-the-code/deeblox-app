@@ -114,14 +114,14 @@
 }
 
 /* Extra small devices (portrait phones, less than 480px) */
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   #footer .data .container-social-network .socialNetwork {
     width: 20%;
   }
-}
+} */
 
 /* Extra small devices (portrait phones, less than 320px) */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   #footer {
     font-size: 14px;
   }

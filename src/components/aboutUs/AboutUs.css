@@ -146,7 +146,7 @@
   }
 }
 
-@media screen and (max-width: 480px) {
+/* @media screen and (max-width: 480px) {
   #aboutUs {
     height: 88vh;
   }
@@ -170,16 +170,18 @@
     top: 25px;
     right: -15px;
   }
-}
+} */
 
 /* Extra small devices (portrait phones, less than 320px) */
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 480px) {
   #aboutUs {
     font-size: 14px;
+    height: 88vh;
   }
 
   #aboutUs .container .info {
     padding: 0 1em;
+    justify-content: flex-start;
   }
 
   #aboutUs .container .info .title {
@@ -201,5 +203,10 @@
   #aboutUs .container .socialNetwork {
     right: 7px;
     transform: translateY(65vh);
+    color: var(--color-light-gray-75);
+  }
+
+  #aboutUs .container .info .moreInfoButton {
+    flex: none;
   }
 }

@@ -122,4 +122,11 @@
 
 /* Extra small devices (portrait phones, less than 320px) */
 @media screen and (max-width: 320px) {
+  #footer {
+    font-size: 14px;
+  }
+
+  #footer .data .container-social-network .socialNetwork {
+    width: auto;
+  }
 }

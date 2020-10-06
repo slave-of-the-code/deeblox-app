@@ -136,4 +136,28 @@
 
 /* Extra small devices (portrait phones, less than 320px) */
 @media screen and (max-width: 320px) {
+  #jobs .container > span {
+    font-size: 20px;
+    font-weight: 500;
+    min-height: 55px;
+  }
+
+  #jobs .image-container {
+    width: 80%;
+  }
+  #jobs .grid-image {
+    padding-bottom: 0em;
+  }
+  #jobs .container > .imageCircle {
+    left: 10px;
+    top: 30px;
+    width: 65px;
+
+    height: 65px;
+  }
+
+  #jobs .container > .imageArrow {
+    height: 65px;
+    top: 25px;
+  }
 }

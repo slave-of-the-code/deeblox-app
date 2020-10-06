@@ -1,6 +1,6 @@
 #contact {
   background: var(--color-light-gray-15);
-  font-size: 2em;
+  font-size: 32px;
 }
 
 #contact .container {
@@ -54,7 +54,7 @@
 }
 
 #contact .container .contacto form > div {
-  font-size: 0.5em;
+  font-size: 0.65em;
   width: 100%;
 }
 
@@ -175,4 +175,41 @@
 
 /* Extra small devices (portrait phones, less than 320px) */
 @media screen and (max-width: 320px) {
+  #contact {
+    font-size: 20px;
+  }
+  #contact .inputText {
+    padding: 0.75em;
+  }
+  #contact .container .contacto .inputTextArea {
+    padding: 0.75em;
+    margin: 0;
+  }
+
+  #contact .container .contacto {
+    width: 100%;
+  }
+  #contact .container .contacto .title {
+    margin: 0.5em 0;
+    font-weight: 500;
+    font-size: 0.85em;
+  }
+
+  #contact .container .contacto .inputs > div {
+    margin: 0.75em 0;
+  }
+
+  #contact .container .contacto .button-Send {
+    padding: 1em 0;
+  }
+
+  #contact .container .socialNetwork {
+    display: none;
+  }
+
+  #contact .container .imageEnvelope {
+    width: 40%;
+    height: 125px;
+    right: -10px;
+  }
 }

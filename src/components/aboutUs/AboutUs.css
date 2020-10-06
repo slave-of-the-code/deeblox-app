@@ -174,4 +174,32 @@
 
 /* Extra small devices (portrait phones, less than 320px) */
 @media screen and (max-width: 320px) {
+  #aboutUs {
+    font-size: 14px;
+  }
+
+  #aboutUs .container .info {
+    padding: 0 1em;
+  }
+
+  #aboutUs .container .info .title {
+    font-size: 2em;
+  }
+
+  #aboutUs .container .info .title,
+  #aboutUs .container .info .text {
+    padding: 0;
+  }
+
+  #aboutUs .container .info .title > .imagePlane {
+    height: 95%;
+    top: 10px;
+    right: 5px;
+    background-position-x: right !important;
+  }
+
+  #aboutUs .container .socialNetwork {
+    right: 7px;
+    transform: translateY(65vh);
+  }
 }

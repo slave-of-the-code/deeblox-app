@@ -181,4 +181,13 @@
 
 /* Extra small devices (portrait phones, less than 320px) */
 @media screen and (max-width: 320px) {
+  #header {
+    font-size: 10px;
+  }
+
+  #header .logo {
+    width: 50%;
+    height: 65%;
+    left: 0em;
+  }
 }

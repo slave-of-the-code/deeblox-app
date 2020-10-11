@@ -100,8 +100,8 @@
 
 .isInvalid {
   border-style: none;
-  border-bottom: 1px solid rgba(255, 0, 0, 1);
-  background: linear-gradient(to right, rgba(255, 0, 0, 0.15), transparent);
+  border: 1px solid rgba(255, 0, 0, 1);
+  border-left: 3px solid red;
 }
 
 /* Large devices (desktops, less than 1366px) */
@@ -178,7 +178,7 @@
   #contact {
     font-size: 20px;
     padding: 0 1em;
-    height: 88vh;
+    /* height: 88vh; */
   }
 
   #contact .inputText {

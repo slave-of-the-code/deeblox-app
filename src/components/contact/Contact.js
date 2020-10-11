@@ -41,6 +41,10 @@ const Contact = () => {
     backgroundSize: 'contain'
   };
 
+  const redAsterisc = () => {
+    return <strong style={{ color: 'red' }}>*</strong>;
+  };
+
   return (
     <>
       <section id="contact">
@@ -55,8 +59,11 @@ const Contact = () => {
                     : 'valid';
                   return (
                     <div key={index}>
-                      <span className="inputLabel">{input.title}</span>
+                      <span className="inputLabel">
+                        {input.title} {errors[input.name] && redAsterisc()}
+                      </span>
                       <input
+                        type="text"
                         ref={register({ required: true })}
                         className={`inputText ${inputInvalid}`}
                         name={input.name}
@@ -66,7 +73,9 @@ const Contact = () => {
                 })}
               </div>
               <div className="input-textarea">
-                <span className="inputLabel">{textArea.title}</span>
+                <span className="inputLabel">
+                  {textArea.title} {errors[textArea.name] && redAsterisc()}
+                </span>
                 <textarea
                   className={
                     errors[textArea.name]

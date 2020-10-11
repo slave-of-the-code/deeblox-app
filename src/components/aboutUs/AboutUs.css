@@ -2,179 +2,167 @@
   max-width: 1368px;
   margin: 0 auto;
   font-size: 16px;
+  height: 640px;
 }
 
 #aboutUs .container {
   display: flex;
-  height: 100vh;
-  position: relative;
-  margin-top: -0.5em;
+  height: 100%;
 }
 
-#aboutUs .container .socialNetwork {
-  color: var(--color-white);
-  position: absolute;
-  right: 15px;
-  transform: translateY(70vh);
-  height: 100px;
-}
-
-#aboutUs .container .info {
-  position: relative;
-  flex: 1.5;
+/* SOLUCIONES AGILES */
+#aboutUs .container > .info-container {
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 3em;
+  padding: 0 2em;
+  position: relative;
 }
-
-#aboutUs .container .image {
-  flex: 3;
-}
-
-#aboutUs .container .info .title {
+#aboutUs .container > .info-container > .title {
   color: var(--color-orange-dark);
   font-size: 2.5em;
-  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  position: relative;
 }
-
-#aboutUs .container .info .title > .imagePlane {
-  width: 200px;
-  height: 100%;
-  position: absolute;
-  right: 0;
-  left: 0;
-  margin: auto;
-  z-index: -1;
-}
-
-#aboutUs .container .info .title > span:nth-of-type(1) {
+#aboutUs .container > .info-container > .title > span:nth-of-type(1) {
   margin-left: 0.85em;
   font-size: 0.85em;
   font-weight: 500;
 }
 
-#aboutUs .container .info .title > span:nth-of-type(2) {
+#aboutUs .container > .info-container > .title > span:nth-of-type(2) {
   font-weight: bold;
   font-size: 1.25em;
   transform: translateY(-14px);
 }
 
-#aboutUs .container .info .text {
+#aboutUs .container > .info-container > .text {
+  padding: 1em 0;
+  margin: 1em 0;
+}
+#aboutUs .container > .info-container > .btn-moreInfo {
+  padding: 1em 0;
+  margin: 1em 0;
+}
+
+/* ENVELOPE */
+#aboutUs .container > .info-container .imagePlane {
+  position: absolute;
+  top: 70px;
+  right: 0;
+  left: 0;
+  width: 200px;
+  height: 150px;
+  margin: auto;
+  z-index: -1;
+}
+
+/* IMAGE */
+#aboutUs .container > .img-container {
   flex: 2;
-  font-size: 0.9em;
-  line-height: 1.5em;
+  justify-content: flex-end;
+  display: flex;
+  position: relative;
 }
-#aboutUs .container .info .moreInfoButton {
-  flex: 1.5;
+#aboutUs .container > .img-container > .image {
+  height: 100%;
+  width: 100%;
 }
 
-/* Large devices (desktops, less than 1366px) */
+/* SOCIAL NETWORK */
+#aboutUs .container > .img-container > .socialNetwork {
+  color: var(--color-white);
+  position: absolute;
+  right: 7%;
+  bottom: 12%;
+  height: 100px;
+}
+
 @media screen and (max-width: 1366px) {
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: 5%;
+  }
 }
 
-/* Large devices (desktops, less than 1280px) */
 @media screen and (max-width: 1280px) {
-}
-
-/* Medium devices (tablets, less than 1024px) */
-@media screen and (max-width: 1024px) {
-  #aboutUs .container .socialNetwork {
-    transform: translateY(63vh);
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: 3%;
   }
-}
-
-/* Small devices (landscape phones, less than 768px) */
-@media screen and (max-width: 768px) {
-  #aboutUs .container {
-    flex-direction: column;
+  #aboutUs .container > .info-container .imagePlane {
     margin: 0;
-    height: 88vh;
-  }
-
-  #aboutUs .container .info {
-    flex: none;
-    padding: 0 3em;
-    margin-bottom: 1em;
-  }
-
-  #aboutUs .container .info .title,
-  #aboutUs .container .info .text {
-    flex: 0;
-    padding: 1em 0;
-    flex: none;
-  }
-
-  #aboutUs .container .info .title {
-    padding: 0;
-  }
-
-  #aboutUs .container .info .title > .imagePlane {
-    height: 140%;
-    top: 25px;
-    right: 10px;
+    right: 20%;
     left: auto;
   }
+}
 
-  #aboutUs .container .info .moreInfoButton {
+@media screen and (max-width: 1024px) {
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: 3%;
+    bottom: 19%;
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    top: 50px;
+    width: 150px;
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #aboutUs .container {
+    flex-direction: column;
+    position: relative;
+  }
+  #aboutUs .container > .info-container {
+    justify-content: space-evenly;
+  }
+  #aboutUs .container > .info-container > .text {
+    padding: 1em 0;
+    margin: 0;
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    top: 3%;
+    width: 150px;
+    right: auto;
+    left: 22%;
+  }
+  #aboutUs .container > .info-container > .btn-moreInfo {
+    z-index: 1;
     width: fit-content;
-    margin: 1em 0;
   }
 
-  #aboutUs .container .image {
-    flex: auto;
-    width: 80%;
-    margin: 0 auto;
-    background-position-x: center !important;
+  #aboutUs .container > .img-container {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 75%;
+    height: 60%;
   }
+  #aboutUs .container > .img-container > .image {
+    opacity: 0.15;
+  }
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: 25px;
+    bottom: 9%;
+    color: gray;
+  }
+}
 
-  #aboutUs .container .socialNetwork {
-    right: 85px;
-    transform: translateY(70vh);
-  }
+@media screen and (max-width: 768px) {
 }
 
 /* Extra small devices (portrait phones, less than 640px) */
 @media screen and (max-width: 640px) {
-  #aboutUs .container .socialNetwork {
-    right: 70px;
-    transform: translateY(74vh);
+  #aboutUs .container > .info-container .imagePlane {
+    left: auto;
+    right: 5%;
   }
 }
 
-/* @media screen and (max-width: 480px) {
-  #aboutUs {
-    height: 88vh;
-  }
-
-  #aboutUs .container .socialNetwork {
-    right: 20px;
-    transform: translateY(70vh);
-    color: var(--color-light-gray-75);
-  }
-
-  #aboutUs .container .info {
-    justify-content: flex-start;
-  }
-
-  #aboutUs .container .info .moreInfoButton {
-    flex: none;
-  }
-
-  #aboutUs .container .info .title > .imagePlane {
-    height: 115%;
-    top: 25px;
-    right: -15px;
-  }
-} */
-
 /* Extra small devices (portrait phones, less than 320px) */
 @media screen and (max-width: 480px) {
-  #aboutUs {
+  /* #aboutUs {
     font-size: 14px;
     height: 88vh;
   }
@@ -208,5 +196,5 @@
 
   #aboutUs .container .info .moreInfoButton {
     flex: none;
-  }
+  } */
 }

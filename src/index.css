@@ -18,11 +18,14 @@ input {
 }
 
 section {
-  /* min-height: 100vh; */
   padding: 0.5em 0;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+#root {
+  height: 100vh;
 }

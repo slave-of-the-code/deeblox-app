@@ -99,8 +99,8 @@
 
 .isInvalid {
   border-style: none;
-  border: 1px solid rgba(255, 0, 0, 1);
-  border-left: 3px solid red;
+  border: 1px solid rgb(255, 0, 0, 0.35);
+  border-left: 5px solid red;
 }
 
 /* Large devices (desktops, less than 1366px) */

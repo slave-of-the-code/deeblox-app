@@ -118,4 +118,23 @@
 }
 
 @media screen and (max-width: 480px) {
+  #jobs .container > .title {
+    padding: 0;
+    font-size: 1.5em;
+  }
+  #jobs .container > .grid-image > .image-container {
+    height: 317px;
+    width: 80%;
+    margin: 1em 0;
+  }
+  #jobs .container > .imageCircle {
+    height: 50px;
+    left: -25px;
+    top: 1%;
+  }
+  #jobs .container > .imageArrow {
+    height: 80px;
+    width: 70%;
+    top: 0%;
+  }
 }

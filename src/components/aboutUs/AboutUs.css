@@ -115,17 +115,16 @@
     position: relative;
   }
   #aboutUs .container > .info-container {
-    justify-content: space-evenly;
+    justify-content: flex-start;
   }
   #aboutUs .container > .info-container > .text {
     padding: 1em 0;
     margin: 0;
   }
   #aboutUs .container > .info-container .imagePlane {
-    top: 3%;
+    top: -4%;
     width: 150px;
-    right: auto;
-    left: 22%;
+    right: 10%;
   }
   #aboutUs .container > .info-container > .btn-moreInfo {
     z-index: 1;
@@ -152,7 +151,6 @@
 @media screen and (max-width: 768px) {
 }
 
-/* Extra small devices (portrait phones, less than 640px) */
 @media screen and (max-width: 640px) {
   #aboutUs .container > .info-container .imagePlane {
     left: auto;
@@ -160,41 +158,40 @@
   }
 }
 
-/* Extra small devices (portrait phones, less than 320px) */
 @media screen and (max-width: 480px) {
-  /* #aboutUs {
-    font-size: 14px;
-    height: 88vh;
-  }
-
-  #aboutUs .container .info {
-    padding: 0 1em;
-    justify-content: flex-start;
-  }
-
-  #aboutUs .container .info .title {
+  #aboutUs .container > .info-container > .title {
     font-size: 2em;
   }
+  #aboutUs .container > .info-container .imagePlane {
+    width: 125px;
+  }
+}
 
-  #aboutUs .container .info .title,
-  #aboutUs .container .info .text {
+@media screen and (max-width: 320px) {
+  #aboutUs {
+    max-width: 1368px;
+    margin: 0 auto;
+    font-size: 16px;
+    height: 402px;
+  }
+  #aboutUs .container > .info-container > .title {
+    font-size: 1.5em;
+  }
+  #aboutUs .container > .info-container > .title > span:nth-of-type(2) {
+    transform: translateY(-10px);
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    top: -7%;
+    right: 9%;
+    width: 85px;
+  }
+  #aboutUs .container > .info-container > .text {
     padding: 0;
+    font-size: 0.75em;
+    line-height: 17px;
   }
-
-  #aboutUs .container .info .title > .imagePlane {
-    height: 95%;
-    top: 10px;
-    right: 5px;
-    background-position-x: right !important;
+  #aboutUs .container > .img-container {
+    top: 50%;
+    right: 7%;
   }
-
-  #aboutUs .container .socialNetwork {
-    right: 7px;
-    transform: translateY(65vh);
-    color: var(--color-light-gray-75);
-  }
-
-  #aboutUs .container .info .moreInfoButton {
-    flex: none;
-  } */
 }

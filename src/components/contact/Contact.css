@@ -8,7 +8,6 @@
   position: relative;
   max-width: 1368px;
   margin: 0 auto;
-  margin-top: -0.5em;
 }
 
 #contact .container .imageEnvelope {
@@ -144,11 +143,11 @@
 
 @media screen and (max-width: 640px) {
   #contact .container .contacto {
-    width: 85%;
+    width: 100%;
   }
 
   #contact .container .socialNetwork {
-    right: -3%;
+    right: -35px;
   }
 
   #contact .container .imageEnvelope {
@@ -158,27 +157,10 @@
   }
 }
 
-/* Extra small devices (portrait phones, less than 480px) */
-/* @media screen and (max-width: 480px) {
-  #contact {
-    padding: 0 1em;
-  }
-
-  #contact .container .contacto .title {
-    margin: 0.25em 0;
-  }
-
-  #contact .container .contacto .button-Send {
-    padding: 0.5em 0 1.5em 0;
-  }
-} */
-
-/* Extra small devices (portrait phones, less than 320px) */
 @media screen and (max-width: 480px) {
   #contact {
     font-size: 20px;
     padding: 0 1em;
-    /* height: 88vh; */
   }
 
   #contact .inputText {

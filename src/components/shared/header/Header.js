@@ -38,13 +38,17 @@ const Header = (props) => {
       buttonBurgerActive: !prevState.buttonBurgerActive
     }));
 
-    !state.navLinksActive && $body.classList.add('overflow-hidden');
+    !state.navLinksActive
+      ? $body.classList.add('overflow-hidden')
+      : $body.classList.remove('overflow-hidden');
   };
 
   return (
     <>
       <header id="header">
-        <div className="logo" style={imageLogoStyle}></div>
+        <Link to="/">
+          <div className="logo" style={imageLogoStyle}></div>
+        </Link>
         <ul
           className={state.navLinksActive ? 'nav-links --active' : 'nav-links'}
         >

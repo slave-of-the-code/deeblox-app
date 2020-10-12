@@ -21,11 +21,11 @@ const AboutUs = () => {
   const { SocialNetwork: socialNetworkData } = Data;
 
   const imgStyle = {
-    background: `url(${aboutUs}) no-repeat right center`,
+    background: `url(${aboutUs}) no-repeat center center`,
     backgroundSize: 'contain'
   };
   const imgEnvelopeStyle = {
-    background: `url(${plane}) no-repeat center bottom`,
+    background: `url(${plane}) no-repeat center center`,
     backgroundSize: 'contain'
   };
   const listSocialNetwork = [
@@ -38,23 +38,41 @@ const AboutUs = () => {
   const { AboutUs: dataAboutUS } = Data;
   const { title, subTitle, paragraph, textButton } = dataAboutUS;
 
+  /* */
+  const SolucionesAgiles = () => {
+    return (
+      <>
+        <div className="title">
+          <span>{title}</span>
+          <span>{subTitle}</span>
+        </div>
+
+        <div className="text">
+          <p>{paragraph}</p>
+        </div>
+
+        <div className="btn-moreInfo">
+          <Link to="/more-info" className="moreInfoButton">
+            <Button text={textButton} />
+          </Link>
+        </div>
+
+        <div style={imgEnvelopeStyle} className="imagePlane"></div>
+      </>
+    );
+  };
+
   return (
     <>
       <section id="aboutUs">
         <div className="container">
-          <div className="info">
-            <div className="title">
-              <div style={imgEnvelopeStyle} className="imagePlane"></div>
-              <span>{title}</span>
-              <span>{subTitle}</span>
-            </div>
-            <p className="text">{paragraph}</p>
-            <Link to="/more-info" className="moreInfoButton">
-              <Button text={textButton} />
-            </Link>
+          <div className="info-container">
+            <SolucionesAgiles />
           </div>
-          <div className="image" style={imgStyle}></div>
-          <SocialNetwork listSocialNetwork={listSocialNetwork} />
+          <div className="img-container">
+            <div className="image" style={imgStyle}></div>
+            <SocialNetwork listSocialNetwork={listSocialNetwork} />
+          </div>
         </div>
       </section>
     </>

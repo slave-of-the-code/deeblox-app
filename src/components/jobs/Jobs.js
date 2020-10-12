@@ -14,19 +14,19 @@ const Jobs = () => {
   const listImage = page.images;
 
   const imageCircleStyle = {
-    background: `url(${imageCircle}) no-repeat center top`,
-    backgroundSize: 'contain'
+    background: `url(${imageCircle}) no-repeat center center / contain`
   };
   const imageArrowStyle = {
-    background: `url(${imageArrow}) no-repeat center right`,
-    backgroundSize: 'contain'
+    background: `url(${imageArrow}) no-repeat center right / contain`
   };
 
   return (
     <>
       <section id="jobs">
         <div className="container">
-          <span>{mainTitle}</span>
+          <div className="title">
+            <span>{mainTitle}</span>
+          </div>
           <div className="grid-image">
             {listImage.map(({ url, isAlignRight, title, text }, index) => {
               return (

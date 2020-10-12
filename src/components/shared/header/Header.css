@@ -1,9 +1,7 @@
 #header {
-  height: 12vh;
   display: flex;
   font-size: 16px;
   padding: 0 2em 1em 2em;
-  max-width: 1368px;
   position: relative;
   width: calc(100% - 4em);
   justify-content: flex-end;
@@ -105,11 +103,16 @@
   }
 
   #header {
+    height: 12vh;
     padding: 0;
     width: 100%;
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     background: var(--color-white-to-bottom);
+  }
+
+  .logo {
+    bottom: 5%;
   }
 
   #root > #container > #content > section {
@@ -175,19 +178,27 @@
 @media screen and (max-width: 640px) {
 }
 
-/* Extra small devices (portrait phones, less than 480px) */
 @media screen and (max-width: 480px) {
-}
-
-/* Extra small devices (portrait phones, less than 320px) */
-@media screen and (max-width: 320px) {
   #header {
     font-size: 10px;
   }
 
   #header .logo {
     width: 50%;
-    height: 65%;
-    left: 0em;
+    height: 60%;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #header .logo {
+    left: -15px;
+  }
+  .line1.--toggle {
+    transform: rotate(-45deg) translate(-3px, 3px);
+  }
+  .button-burguer > div {
+    width: 20px;
+    height: 3px;
   }
 }

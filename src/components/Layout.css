@@ -1,11 +1,24 @@
 #container {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 12vh 1fr auto;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 100%;
 }
 
-#content {
-  flex: 1;
+#container > #header {
+  grid-area: header;
+}
+#container > #content {
+  grid-area: content;
+}
+#container > #footer {
+  grid-area: footer;
 }
 
 /* Large devices (desktops, less than 1200px) */

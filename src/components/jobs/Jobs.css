@@ -2,9 +2,6 @@
   font-size: 16px;
   max-width: 1368px;
   margin: 0 auto;
-  align-items: center;
-  justify-content: center;
-  display: flex;
 }
 
 #jobs .container {
@@ -12,18 +9,24 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  margin-top: -0.5em;
-}
-
-#jobs .container > span {
-  font-size: 2em;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  min-height: 85px;
-  padding: 1em 0;
 }
 
+/* TITLE */
+#jobs .container > .title {
+  padding: 1em 0;
+  font-size: 2em;
+}
+
+/* GRID IMAGES */
+#jobs .container > .grid-image {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 2em;
+}
+
+/* CIRCLE AND ARROW IMAGE */
 #jobs .container > .imageCircle {
   position: absolute;
   left: 170px;
@@ -42,122 +45,96 @@
   z-index: -1;
 }
 
-#jobs .grid-image {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding-bottom: 2em;
-}
-
-/* Large devices (desktops, less than 1366px) */
 @media screen and (max-width: 1366px) {
 }
 
-/* Large devices (desktops, less than 1280px) */
 @media screen and (max-width: 1280px) {
   #jobs .container > .imageCircle {
-    left: 125px;
-    top: 85px;
+    left: 10%;
+    top: 8%;
   }
   #jobs .container > .imageArrow {
-    right: 60px;
+    top: 6%;
+    right: 3%;
+    width: 65%;
   }
 }
 
-/* Medium devices (tablets, less than 1024px) */
 @media screen and (max-width: 1024px) {
   .image-container {
-    margin: 1em 1.5em;
+    width: 50%;
+    height: 380px;
   }
-
   #jobs .container > .imageCircle {
-    left: 40px;
-    top: 85px;
+    left: 16%;
+    top: 3%;
   }
-
   #jobs .container > .imageArrow {
-    right: 5px;
-    top: 80px;
     width: 65%;
+    top: 3%;
   }
 }
 
-/* Small devices (landscape phones, less than 768px) */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   #jobs .container > .imageCircle {
-    left: 125px;
-    top: 55px;
-    width: 90px;
+    left: 4%;
+    top: 2%;
+    opacity: 0.5;
   }
-
   #jobs .container > .imageArrow {
-    right: 100px;
-    top: 55px;
-    width: 55%;
-    height: 80px;
+    width: 70%;
+    top: 2%;
+    opacity: 0.5;
   }
-
-  #jobs .container > span {
+  #jobs .container > .grid-image {
     padding: 0;
   }
-
-  #contact .container .contacto .button-Send {
-    padding: 0.5em 0 1.5em 0;
+  #jobs .container > .grid-image > .image-container {
+    width: 75%;
+    height: 410px;
   }
 }
 
-/* Extra small devices (portrait phones, less than 640px) */
+@media screen and (max-width: 768px) {
+}
+
 @media screen and (max-width: 640px) {
-  #jobs .container > .imageCircle {
-    left: 80px;
-    top: 55px;
-    width: 80px;
+  #jobs .container > .title {
+    padding: 0.5em 0;
   }
-
+  #jobs .container > .imageCircle {
+    height: 75px;
+    left: 0;
+    top: 3%;
+  }
   #jobs .container > .imageArrow {
-    right: 45px;
-    top: 60px;
+    height: 75px;
     width: 65%;
-    height: 80px;
+    top: 3%;
+  }
+  #jobs .container > .grid-image > .image-container {
+    height: 360px;
   }
 }
 
-/* Extra small devices (portrait phones, less than 480px) */
 @media screen and (max-width: 480px) {
-  #jobs .container > .imageCircle {
-    left: 15px;
+  #jobs .container > .title {
+    padding: 0;
+    font-size: 1.5em;
   }
-
-  #jobs .container > .imageArrow {
-    right: 25px;
-    top: 40px;
-  }
-}
-
-/* Extra small devices (portrait phones, less than 320px) */
-@media screen and (max-width: 320px) {
-  #jobs .container > span {
-    font-size: 20px;
-    font-weight: 500;
-    min-height: 55px;
-  }
-
-  #jobs .image-container {
+  #jobs .container > .grid-image > .image-container {
+    height: 317px;
     width: 80%;
-  }
-  #jobs .grid-image {
-    padding-bottom: 0em;
+    margin: 1em 0;
   }
   #jobs .container > .imageCircle {
-    left: 10px;
-    top: 30px;
-    width: 65px;
-
-    height: 65px;
+    height: 50px;
+    left: -25px;
+    top: 1%;
   }
-
   #jobs .container > .imageArrow {
-    height: 65px;
-    top: 25px;
+    height: 80px;
+    width: 70%;
+    top: 0%;
   }
 }

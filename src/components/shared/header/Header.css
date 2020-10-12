@@ -186,6 +186,7 @@
   #header .logo {
     width: 50%;
     height: 60%;
+    bottom: 15%;
     left: 0;
   }
 }
@@ -193,6 +194,8 @@
 @media screen and (max-width: 320px) {
   #header .logo {
     left: -15px;
+    width: 55%;
+    height: 75%;
   }
   .line1.--toggle {
     transform: rotate(-45deg) translate(-3px, 3px);

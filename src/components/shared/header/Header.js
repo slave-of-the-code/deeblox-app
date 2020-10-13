@@ -6,9 +6,15 @@ import { Link } from 'react-router-dom';
 import logo from '../../../assets/img-site/logo.png';
 import './Header.css';
 
+import { useTranslation } from 'react-i18next';
+// import i18next from '../../../i18n';
+
 import { Data } from '../../../data/data';
+import Internationalization from '../internationalization/Internationalization';
 
 const Header = (props) => {
+  const { t } = useTranslation();
+
   const $body = document.querySelector('body');
   const { Header: page } = Data;
 
@@ -53,25 +59,15 @@ const Header = (props) => {
           className={state.navLinksActive ? 'nav-links --active' : 'nav-links'}
         >
           {links.map((link, index) => {
-            let linkRender = '';
-            if (link.isLink) {
-              linkRender = (
-                <li key={index}>
-                  <Link to={link.href}>{link.title}</Link>
-                </li>
-              );
-            } else {
-              linkRender = (
-                <li key={index}>
-                  <a href={link.href} onClick={toggleMenu}>
-                    {link.title}
-                  </a>
-                </li>
-              );
-            }
-
-            return linkRender;
+            return (
+              <li key={index}>
+                <a href={link.href} onClick={toggleMenu}>
+                  {t(`nav.${link.title}`)}
+                </a>
+              </li>
+            );
           })}
+          <Internationalization />
         </ul>
         <div className="button-burguer" onClick={toggleMenuButton}>
           <div

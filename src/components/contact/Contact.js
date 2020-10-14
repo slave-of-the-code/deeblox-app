@@ -1,13 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-import {
-  faTwitter,
-  faFacebookF,
-  faInstagram,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons';
-
 import Button from '../shared/button/Button';
 import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
 
@@ -24,18 +17,12 @@ const Contact = () => {
 
   // console.log(watch('firstname')); // watch input value by passing the name of it
 
-  const { SocialNetwork: socialNetworkData, Contact: page } = Data;
+  const { Contact: page } = Data;
 
   const inputs = page.inputs;
   const textArea = page.textArea;
   const mainTitle = page.mainTitle;
   const buttonSend = page.buttonSend;
-  const listSocialNetwork = [
-    { url: socialNetworkData.urlTwitter, icon: faTwitter },
-    { url: socialNetworkData.urlFacebook, icon: faFacebookF },
-    { url: socialNetworkData.urlInstagram, icon: faInstagram },
-    { url: socialNetworkData.urlYoutube, icon: faYoutube }
-  ];
   const imageEnvelopeStyle = {
     background: `url(${imageEnvelope}) no-repeat center center`,
     backgroundSize: 'contain'
@@ -91,7 +78,7 @@ const Contact = () => {
               </div>
             </form>
           </div>
-          <SocialNetwork listSocialNetwork={listSocialNetwork} />
+          <SocialNetwork />
           <div className="imageEnvelope" style={imageEnvelopeStyle}></div>
         </div>
       </section>

@@ -1,8 +1,22 @@
 {
-    "nav": {
-        "home":"Home",
-        "our":"Nosotros",
-        "jobs":"Trabajos",
-        "contact":"Contacto"
-    }
+    "company":{
+         "name" : "Deeblox" ,
+         "phono" : "+54 11 2821 9000" ,
+         "eMail" : "contact@deeblox.com" ,
+         "street" : "Avda. Ricardo Balbín 2437 - CABA - Buenos Aires" ,
+         "data" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate at felis sed condimentum. Curabitur lorem nunc, dictum at nulla dictum, tempus tristique tortor. Nulla facilisi. Nullam mollis ligula a ullamcorper ultricies. Nulla odio est, facilisis sed mauris id, malesuada gravida ipsum" 
+    },
+    "nav": [
+        { "title": "Home", "href": "#content" },
+        { "title": "Nosotros", "href": "#aboutUs" },
+        { "title": "Trabajos", "href": "#jobs" },
+        { "title": "Casos de éxitos", "href": "#successStories" },
+        { "title": "Contacto", "href": "#contact" }
+    ],
+    "socialNetwork":[
+        { "name" : "Facebook", "url":"https://www.facebook.com/", "icon":"['fab','fa-facebook-f']" },
+        { "name" : "Twitter", "url":"https://www.twitter.com", "icon":"faTwitter"  },
+        { "name" : "Instagram", "url":"https://www.instagram.com", "icon":"faInstagram"  },
+        { "name" : "Youtube", "url":"https://www.youtube.com", "icon":"faYoutube"  }
+    ]
 }

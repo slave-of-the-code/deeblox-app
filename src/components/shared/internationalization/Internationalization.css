@@ -1,7 +1,6 @@
 .internationalization-container {
   display: flex;
   width: 60px;
-  /* height: fit-content; */
   justify-content: space-around;
   padding: 0.5em;
 }

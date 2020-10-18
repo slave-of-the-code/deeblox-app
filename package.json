@@ -30,7 +30,7 @@
     "singleQuote": true,
     "bracketSpacing": true,
     "trailingComma": "none",
-    "printWidth": 80,
+    "printWidth": 100,
     "arrowParens": "always"
   },
   "eslintConfig": {

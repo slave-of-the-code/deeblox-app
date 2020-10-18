@@ -2,21 +2,92 @@
     "company":{
          "name" : "Deeblox" ,
          "phono" : "+54 11 2821 9000" ,
-         "eMail" : "contact@deeblox.com" ,
-         "street" : "Avda. Ricardo Balbín 2437 - CABA - Buenos Aires" ,
-         "data" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vulputate at felis sed condimentum. Curabitur lorem nunc, dictum at nulla dictum, tempus tristique tortor. Nulla facilisi. Nullam mollis ligula a ullamcorper ultricies. Nulla odio est, facilisis sed mauris id, malesuada gravida ipsum" 
+         "eMail" : "contacts@deeblox.com" ,
+         "street" : "Marti Jose 875 - Ciudad Autonoma de Buenos Aires - Buenos Aires" ,
+         "data" : "Suscríbete para recibir nuestras noticias, perspectivas e invitaciones a eventos. Todos los Derechos Reservados - Deeblox 2020" 
     },
     "nav": [
         { "title": "Home", "href": "#content" },
         { "title": "Nosotros", "href": "#aboutUs" },
         { "title": "Trabajos", "href": "#jobs" },
-        { "title": "Casos de éxitos", "href": "#successStories" },
+        { "title": "Casos de Exito", "href": "#successStories" },
         { "title": "Contacto", "href": "#contact" }
     ],
     "socialNetwork":[
-        { "name" : "Facebook", "url":"https://www.facebook.com/", "icon":"['fab','fa-facebook-f']" },
-        { "name" : "Twitter", "url":"https://www.twitter.com", "icon":"faTwitter"  },
-        { "name" : "Instagram", "url":"https://www.instagram.com", "icon":"faInstagram"  },
-        { "name" : "Youtube", "url":"https://www.youtube.com", "icon":"faYoutube"  }
-    ]
+        { "name" : "Facebook", "url":"https://www.facebook.com/" },
+        { "name" : "Twitter", "url":"https://www.twitter.com"  },
+        { "name" : "Instagram", "url":"https://www.instagram.com" },
+        { "name" : "Youtube", "url":"https://www.youtube.com" }
+    ],
+    "aboutUs" : {
+        "title": "Soluciones",
+        "subTitle": "Ágiles",
+        "paragraph": "Somos la combinación de la innovación y la experiencia, logramos en la formación de nuestra empresa el equilibrio de la experiencia en proyectos de alta criticidad, transacciones masivas y tecnología. Enfocados en el éxito de la transformación digital y la generación de valor.",
+        "textButton": "Mas informacion"
+    },
+    "ourServices" : {
+        "title" : "Nuestros Servicios",
+        "images" : [
+            {
+                "title":"Cloud and DevOps",
+                "url":"../assets/img-web/chicapunkweb.png",
+                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "isAlignRight": true
+            },
+            {
+                "title":"Develpment",
+                "url":"../assets/img-web/rulosprogramandoweb.png",
+                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "isAlignRight": false
+            },
+            {
+                "title":"Automation",
+                "url":"../assets/img-web/manorelojWEB.png",
+                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "isAlignRight": true
+            },
+            {
+                "title":"Big Data",
+                "url":"../assets/img-web/appleweb.png",
+                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "isAlignRight": false
+            }
+        ]
+    },
+    "contact" : {
+        "title" : "Contacto",
+        "inputs": [
+            {
+               "name":"firstname",
+               "text":"Nombre",
+               "value":"",
+               "isTextArea":false
+            },
+            {
+               "name":"surname",
+               "text":"Apellido",
+               "value":"",
+               "isTextArea":false
+            },
+            {
+               "name":"emailAddress",
+               "text":"Email",
+               "value":"",
+               "isTextArea":false
+            },
+            {
+               "name":"phone",
+               "text":"Teléfono",
+               "value":"",
+               "isTextArea":false
+            },
+            {
+               "name":"message",
+               "text":"Mensaje",
+               "value":"",
+               "isTextArea":true
+            }
+         ],
+        "buttonSend": "Enviar"
+    }
 }

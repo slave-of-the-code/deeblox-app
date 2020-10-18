@@ -69,35 +69,40 @@
   flex: 2;
 }
 
-#contact .container .contacto .inputs > div {
+#contact .container-input,
+#contact .container-textarea {
   display: flex;
-  width: 45%;
   flex-direction: column;
   margin: 1em 0;
+}
+#contact .container-input {
+  width: 45%;
+}
+#contact .container-textarea {
+  width: 100%;
 }
 
 #contact .inputText {
   padding: 1em 0.5em;
   min-width: 200px;
   outline: none;
-}
-
-#contact .container .contacto .inputTextArea {
-  padding: 1em 0.5em;
-  margin: 1em 0;
-  resize: none;
-  min-height: 150px;
-  outline: none;
-  height: 100%;
-}
-
-.valid {
   border-style: none;
   border-bottom: 1px solid var(--color-orange);
   background: transparent;
 }
 
-.isInvalid {
+#contact .inputTextArea {
+  padding: 1em 0.5em;
+  resize: none;
+  min-height: 150px;
+  outline: none;
+  height: 100%;
+  border-style: none;
+  border-bottom: 1px solid var(--color-orange);
+  background: transparent;
+}
+
+#contact .isInvalid {
   border-style: none;
   border: 1px solid rgb(255, 0, 0, 0.35);
   border-left: 5px solid red;

@@ -133,12 +133,16 @@
     padding: 0 2em;
   }
 
+  #contact .container .contacto {
+    width: 90%;
+  }
+
   #contact .container .contacto .inputs > div {
     width: 100%;
   }
 
   #contact .container .socialNetwork {
-    right: 2.5%;
+    right: 0;
   }
 
   #contact .container .imageEnvelope {

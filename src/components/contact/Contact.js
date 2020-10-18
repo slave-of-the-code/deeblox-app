@@ -1,12 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-
-import {
-  faTwitter,
-  faFacebookF,
-  faInstagram,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 
 import Button from '../shared/button/Button';
 import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
@@ -14,9 +9,10 @@ import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
 import imageEnvelope from '../../assets/img-site/envelope.png';
 import './Contact.css';
 
-import { Data } from '../../data/data';
-
 const Contact = () => {
+  const { t } = useTranslation();
+  const inputs = i18n.t('contact.inputs', { returnObjects: true });
+
   const { register, handleSubmit, errors } = useForm();
   const onSubmit = (data) => {
     console.table(data);
@@ -24,25 +20,13 @@ const Contact = () => {
 
   // console.log(watch('firstname')); // watch input value by passing the name of it
 
-  const { SocialNetwork: socialNetworkData, Contact: page } = Data;
-
-  const inputs = page.inputs;
-  const textArea = page.textArea;
-  const mainTitle = page.mainTitle;
-  const buttonSend = page.buttonSend;
-  const listSocialNetwork = [
-    { url: socialNetworkData.urlTwitter, icon: faTwitter },
-    { url: socialNetworkData.urlFacebook, icon: faFacebookF },
-    { url: socialNetworkData.urlInstagram, icon: faInstagram },
-    { url: socialNetworkData.urlYoutube, icon: faYoutube }
-  ];
   const imageEnvelopeStyle = {
     background: `url(${imageEnvelope}) no-repeat center center`,
     backgroundSize: 'contain'
   };
 
   const redAsterisc = () => {
-    return <strong style={{ color: 'red' }}>*</strong>;
+    return <strong style={{ color: 'red', margin: '0.5em' }}>*</strong>;
   };
 
   return (
@@ -50,48 +34,48 @@ const Contact = () => {
       <section id="contact">
         <div className="container">
           <div className="contacto">
-            <span className="title">{mainTitle}</span>
+            <span className="title">{t('contact.title')}</span>
             <form onSubmit={handleSubmit(onSubmit)}>
               <div className="inputs">
                 {inputs.map((input, index) => {
-                  const inputInvalid = errors[input.name]
-                    ? 'isInvalid'
-                    : 'valid';
+                  const isTextArea = t(input.isTextArea) === 'true';
+                  const inputInvalid = (errors[input.name] && 'isInvalid') || '';
                   return (
-                    <div key={index}>
+                    <div
+                      key={index}
+                      className={isTextArea ? 'container-textarea' : 'container-input'}
+                    >
                       <span className="inputLabel">
-                        {input.title} {errors[input.name] && redAsterisc()}
+                        {t(input.text)}
+                        {inputInvalid && redAsterisc()}
                       </span>
-                      <input
-                        type="text"
-                        ref={register({ required: true })}
-                        className={`inputText ${inputInvalid}`}
-                        name={input.name}
-                      ></input>
+
+                      {(isTextArea && (
+                        <>
+                          <textarea
+                            className={`inputTextArea ${inputInvalid}`}
+                            name={t(input.name)}
+                            ref={register({ required: true })}
+                          ></textarea>
+                        </>
+                      )) || (
+                        <input
+                          className={`inputText ${inputInvalid}`}
+                          type="text"
+                          ref={register({ required: true })}
+                          name={t(input.name)}
+                        ></input>
+                      )}
                     </div>
                   );
                 })}
               </div>
-              <div className="input-textarea">
-                <span className="inputLabel">
-                  {textArea.title} {errors[textArea.name] && redAsterisc()}
-                </span>
-                <textarea
-                  className={
-                    errors[textArea.name]
-                      ? 'inputTextArea isInvalid'
-                      : 'inputTextArea valid'
-                  }
-                  name={textArea.name}
-                  ref={register({ required: true })}
-                ></textarea>
-              </div>
               <div className="button-Send">
-                <Button type={buttonSend.type} text={buttonSend.text} />
+                <Button type="submit" text={t('contact.buttonSend')} />
               </div>
             </form>
           </div>
-          <SocialNetwork listSocialNetwork={listSocialNetwork} />
+          <SocialNetwork />
           <div className="imageEnvelope" style={imageEnvelopeStyle}></div>
         </div>
       </section>

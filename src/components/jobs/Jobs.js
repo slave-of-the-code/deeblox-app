@@ -1,4 +1,6 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../i18n';
 import ContainerImages from '../shared/containerImages/ContainerImages';
 
 import imageCircle from '../../assets/img-site/circle.png';
@@ -6,13 +8,9 @@ import imageArrow from '../../assets/img-site/arrow.png';
 
 import './Jobs.css';
 
-import { Data } from '../../data/data';
-
 const Jobs = () => {
-  const { Jobs: page } = Data;
-  const mainTitle = page.mainTitle;
-  const listImage = page.images;
-
+  const { t } = useTranslation();
+  const images = i18n.t('ourServices.images', { returnObjects: true });
   const imageCircleStyle = {
     background: `url(${imageCircle}) no-repeat center center / contain`
   };
@@ -25,17 +23,17 @@ const Jobs = () => {
       <section id="jobs">
         <div className="container">
           <div className="title">
-            <span>{mainTitle}</span>
+            <span>{t('ourServices.title')}</span>
           </div>
           <div className="grid-image">
-            {listImage.map(({ url, isAlignRight, title, text }, index) => {
+            {images.map((img, index) => {
               return (
                 <ContainerImages
-                  url={url}
-                  isAlignRight={isAlignRight}
+                  url={t(img.url)}
+                  isAlignRight={t(img.isAlignRight) === 'true'}
                   key={index}
-                  title={title}
-                  text={text}
+                  title={t(img.title)}
+                  text={t(img.text)}
                 />
               );
             })}

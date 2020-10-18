@@ -1,8 +1,93 @@
 {
-    "nav": {
-        "home":"Home",
-        "our":"Our",
-        "jobs":"Jobs",
-        "contact":"Contact"
+    "company":{
+         "name" : "Deeblox" ,
+         "phono" : "+54 11 2821 9000" ,
+         "eMail" : "contacts@deeblox.com" ,
+         "street" : "875 Marti Jose - Ciudad Autonoma de Buenos Aires - Buenos Aires" ,
+         "data" : "Subscribe to receive our news, insights, and event invitations. All Rights Reserved - Deeblox 2020" 
+    },
+    "nav": [
+        { "title": "Home", "href": "#content" },
+        { "title": "About Us", "href": "#aboutUs" },
+        { "title": "Jobs", "href": "#jobs" },
+        { "title": "Success Stories", "href": "#successStories" },
+        { "title": "Contact", "href": "#contact" }
+    ],
+    "socialNetwork":[
+        { "name" : "Facebook", "url":"https://www.facebook.com/" },
+        { "name" : "Twitter", "url":"https://www.twitter.com"  },
+        { "name" : "Instagram", "url":"https://www.instagram.com"  },
+        { "name" : "Youtube", "url":"https://www.youtube.com" }
+    ],
+    "aboutUs" : {
+        "title": "Agile",
+        "subTitle": "Solutions",
+        "paragraph": "We are the combination of innovation and experience, we achieve in the formation of our company the balance of experience in highly critical projects, massive transactions and technology. Focused on the success of digital transformation and the generation of value.",
+        "textButton": "More information"
+    },
+    "ourServices" : {
+        "title" : "Our Services",
+        "images" : [
+            {
+                "title":"Cloud and DevOps",
+                "url":"../assets/img-web/chicapunkweb.png",
+                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "isAlignRight": true
+            },
+            {
+                "title":"Develpment",
+                "url":"../assets/img-web/rulosprogramandoweb.png",
+                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "isAlignRight": false
+            },
+            {
+                "title":"Automation",
+                "url":"../assets/img-web/manorelojWEB.png",
+                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "isAlignRight": true
+            },
+            {
+                "title":"Big Data",
+                "url":"../assets/img-web/appleweb.png",
+                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "isAlignRight": false
+            }
+        ]
+    },
+    "contact" : {
+        "title" : "Contact",
+        "inputs": [
+            {
+                "name":"firstname",
+                "text":"Fisrt Name",
+                "value":"",
+                "isTextArea":false
+             },
+             {
+                "name":"surname",
+                "text":"Surname",
+                "value":"",
+                "isTextArea":false
+             },
+             {
+                "name":"emailAddress",
+                "text":"Email",
+                "value":"",
+                "isTextArea":false
+             },
+             {
+                "name":"phone",
+                "text":"Teléfono",
+                "value":"",
+                "isTextArea":false
+             },
+             {
+                "name":"message",
+                "text":"Mensaje",
+                "value":"",
+                "isTextArea":true
+             }
+        ],
+        "buttonSend": "Send"
     }
 }

@@ -1,28 +1,22 @@
 import React, { useState } from 'react';
-// import PropTypes from 'prop-types';
-
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+
+import Internationalization from '../internationalization/Internationalization';
 
 import logo from '../../../assets/img-site/logo.png';
 import './Header.css';
 
-import { useTranslation } from 'react-i18next';
-// import i18next from '../../../i18n';
-
-import { Data } from '../../../data/data';
-import Internationalization from '../internationalization/Internationalization';
-
-const Header = (props) => {
+const Header = () => {
   const { t } = useTranslation();
+  const links = i18n.t('nav', { returnObjects: true });
 
   const $body = document.querySelector('body');
-  const { Header: page } = Data;
-
   const imageLogoStyle = {
     background: `url(${logo}) no-repeat center center`,
     backgroundSize: 'contain'
   };
-  const links = page.navLinks;
 
   const [state, setState] = useState({
     navLinksActive: false,
@@ -62,7 +56,7 @@ const Header = (props) => {
             return (
               <li key={index}>
                 <a href={link.href} onClick={toggleMenu}>
-                  {t(`nav.${link.title}`)}
+                  {t(link.title)}
                 </a>
               </li>
             );

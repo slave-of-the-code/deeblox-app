@@ -1,68 +1,70 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
+import i18n from '../../../i18n';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faEnvelope,
   faPhoneAlt,
   faMapMarkerAlt
 } from '@fortawesome/free-solid-svg-icons';
-import {
-  faTwitter,
-  faFacebookF,
-  faInstagram,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons';
 
 import SocialNetwork from '../socialNetwork/SocialNetwork';
 import './Footer.css';
 
-import { Data } from '../../../data/data';
-
 const Footer = () => {
-  const { SocialNetwork: socialNetworkData, Footer: pageData } = Data;
+  const { t } = useTranslation();
+  const t_company = i18n.t('company', { returnObjects: true });
 
-  const listSocialNetwork = [
-    { url: socialNetworkData.urlTwitter, icon: faTwitter },
-    { url: socialNetworkData.urlFacebook, icon: faFacebookF },
-    { url: socialNetworkData.urlInstagram, icon: faInstagram },
-    { url: socialNetworkData.urlYoutube, icon: faYoutube }
-  ];
-
-  const { cellPhone, email, address, companyName, paragraph } = pageData;
+  for (var prop in t_company) {
+    if (prop === 'name' || prop === 'data') delete t_company[prop];
+  }
 
   return (
     <>
       <footer id="footer">
         <div className="data">
           <div className="container-detail-data">
-            <ul>
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faPhoneAlt} /> {cellPhone}
-                </span>
-              </li>
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faEnvelope} /> {email}
-                </span>
-              </li>
-              <li>
-                <span>
-                  <FontAwesomeIcon icon={faMapMarkerAlt} /> {address}
-                </span>
-              </li>
-            </ul>
+            <ListData />
           </div>
           <div className="container-social-network">
-            <SocialNetwork listSocialNetwork={listSocialNetwork} /> /
-            {companyName}
+            <SocialNetwork />
+            {t('company.name')}
           </div>
         </div>
         <div className="info">
-          <p>{paragraph}</p>
+          <p>{t('company.data')}</p>
         </div>
       </footer>
     </>
   );
+
+  function ListData() {
+    return (
+      <>
+        <ul>
+          <li>
+            <span>
+              <FontAwesomeIcon icon={faPhoneAlt} />
+              {` ${t(t_company.phono)}`}
+            </span>
+          </li>
+          <li>
+            <span>
+              <FontAwesomeIcon icon={faEnvelope} />
+              {` ${t(t_company.eMail)}`}
+            </span>
+          </li>
+          <li>
+            <span>
+              <FontAwesomeIcon icon={faMapMarkerAlt} />
+              {` ${t(t_company.street)}`}
+            </span>
+          </li>
+        </ul>
+      </>
+    );
+  }
 };
 
 Footer.propTypes = {};

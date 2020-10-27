@@ -3,7 +3,7 @@
          "name" : "Deeblox" ,
          "phono" : "+54 11 2821 9000" ,
          "eMail" : "contacts@deeblox.com" ,
-         "street" : "875 Marti Jose - Ciudad Autonoma de Buenos Aires - Buenos Aires" ,
+         "street" : "875 Marti Jose - Buenos Aires City- Buenos Aires" ,
          "data" : "Subscribe to receive our news, insights, and event invitations. All Rights Reserved - Deeblox 2020" 
     },
     "nav": [
@@ -56,38 +56,28 @@
     },
     "contact" : {
         "title" : "Contact",
-        "inputs": [
-            {
-                "name":"firstname",
-                "text":"Fisrt Name",
-                "value":"",
-                "isTextArea":false
-             },
-             {
-                "name":"surname",
+        "inputs" :{
+            "firstname" :{
+                "text":"First name",
+                "value":"" 
+            },
+            "surname" :{
                 "text":"Surname",
-                "value":"",
-                "isTextArea":false
-             },
-             {
-                "name":"emailAddress",
+               "value":"" 
+            },
+            "email" :{
                 "text":"Email",
-                "value":"",
-                "isTextArea":false
-             },
-             {
-                "name":"phone",
-                "text":"Teléfono",
-                "value":"",
-                "isTextArea":false
-             },
-             {
-                "name":"message",
-                "text":"Mensaje",
-                "value":"",
-                "isTextArea":true
-             }
-        ],
+               "value":"" 
+            },
+            "telephone" :{
+                "text":"Telephone",
+                "value":"" 
+            },
+            "message" :{
+                "text":"Message",
+               "value":"" 
+            }
+        },
         "buttonSend": "Send"
     }
 }

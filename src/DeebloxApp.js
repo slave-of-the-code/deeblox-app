@@ -12,6 +12,7 @@ const DeebloxApp = () => {
   return (
     <Router>
       <Layout>
+        {/* children */}
         <Switch>
           <Route exact path="/">
             <>
@@ -26,6 +27,7 @@ const DeebloxApp = () => {
             </>
           </Route>
         </Switch>
+        {/* children */}
       </Layout>
     </Router>
   );

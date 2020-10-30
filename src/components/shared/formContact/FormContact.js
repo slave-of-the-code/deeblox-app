@@ -6,9 +6,9 @@ import i18n from '../../../i18n';
 import Button from '../button/Button';
 
 const FormContact = (props) => {
-  const { register, handleSubmit, errors, watch } = useForm();
+  const url_API_EMAIL = 'https://deeblox-app-backend.herokuapp.com/api/email';
+  const { register, handleSubmit, errors, reset } = useForm();
   const onSubmit = (data) => {
-    console.table(data);
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -20,30 +20,17 @@ const FormContact = (props) => {
         text: data.message
       })
     };
-    fetch('http://localhost:3001/api/email', requestOptions)
+    fetch(url_API_EMAIL, requestOptions)
       .then((response) => response.json())
       .then((result) => {
         console.log('RESULT API EMAIL', result);
+        result.response.indexOf('Ok') >= 0 && reset();
       })
       .catch((err) => {
         console.error('ERROR API EMAIL', err);
       });
     // ====================================================
   };
-  // console.log(watch('telephone')); // watch input value by passing the name of it
-  //   watch(['telephone', 'number']);
-  //   const handleChangeTelephone = (e) => {
-  //     // let telephone = e.target.value;
-
-  //     // if (!Number(telephone)) {
-  //     //   return;
-  //     // }
-  //     const re = /^[0-9\b]+$/;
-  //     if (re.test(e.currentTarget.value)) {
-  //       return true;
-  //     }
-  //     return false;
-  //   };
 
   const { t } = useTranslation();
   const { firstname, surname, telephone, email, message } = i18n.t('contact.inputs', {

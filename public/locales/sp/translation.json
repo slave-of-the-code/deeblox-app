@@ -56,38 +56,28 @@
     },
     "contact" : {
         "title" : "Contacto",
-        "inputs": [
-            {
-               "name":"firstname",
-               "text":"Nombre",
-               "value":"",
-               "isTextArea":false
+        "inputs" :{
+            "firstname" :{
+                "text":"Nombre",
+                "value":"" 
             },
-            {
-               "name":"surname",
-               "text":"Apellido",
-               "value":"",
-               "isTextArea":false
+            "surname" :{
+                "text":"Apellido",
+               "value":"" 
             },
-            {
-               "name":"emailAddress",
-               "text":"Email",
-               "value":"",
-               "isTextArea":false
+            "email" :{
+                "text":"Email",
+               "value":"" 
             },
-            {
-               "name":"phone",
-               "text":"Teléfono",
-               "value":"",
-               "isTextArea":false
+            "telephone" :{
+                "text":"Teléfono",
+                "value":"" 
             },
-            {
-               "name":"message",
-               "text":"Mensaje",
-               "value":"",
-               "isTextArea":true
+            "message" :{
+                "text":"Mensaje",
+               "value":"" 
             }
-         ],
+        },
         "buttonSend": "Enviar"
     }
 }

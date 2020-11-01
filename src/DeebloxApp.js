@@ -3,10 +3,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Layout from './components/Layout';
 import AboutUs from './components/aboutUs/AboutUs';
-import Jobs from './components/jobs/Jobs';
-import Contact from './components/contact/Contact';
+import Jobs from 'components/jobs/Jobs';
+import Contact from 'components/contact/Contact';
 
-import './DeebloxApp.css';
+import 'DeebloxApp.css';
 
 const DeebloxApp = () => {
   return (

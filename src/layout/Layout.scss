@@ -1,0 +1,24 @@
+#container {
+	display: grid;
+	grid-template-areas:
+		'header'
+		'content'
+		'footer';
+	grid-template-columns: 1fr;
+	grid-template-rows: 12vh 1fr auto;
+	max-width: 1366px;
+	margin: 0 auto;
+	height: 100%;
+
+	> #header {
+		grid-area: header;
+	}
+
+	> #content {
+		grid-area: content;
+	}
+
+	> #footer {
+		grid-area: footer;
+	}
+}

@@ -1,12 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import SocialNetwork from '../shared/socialNetwork/SocialNetwork';
-import FormContact from '../shared/formContact/FormContact';
+import SocialNetwork from 'components/shared/socialNetwork/SocialNetwork';
+import FormContact from 'components/shared/formContact/FormContact';
 
 import './Contact.css';
 
-import imageEnvelope from '../../assets/img-site/envelope.png';
+import imageEnvelope from 'assets/img-site/envelope.png';
 
 const Contact = () => {
   const { t } = useTranslation();

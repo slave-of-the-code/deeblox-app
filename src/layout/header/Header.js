@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../../i18n';
+import i18n from 'i18n';
 
-import Internationalization from '../internationalization/Internationalization';
+import Internationalization from 'components/shared/internationalization/Internationalization';
 
-import logo from '../../../assets/img-site/logo.png';
+import logo from 'assets/img-site/logo.png';
 import './Header.css';
 
 const Header = () => {
@@ -49,9 +49,7 @@ const Header = () => {
         <Link to="/">
           <div className="logo" style={imageLogoStyle}></div>
         </Link>
-        <ul
-          className={state.navLinksActive ? 'nav-links --active' : 'nav-links'}
-        >
+        <ul className={state.navLinksActive ? 'nav-links --active' : 'nav-links'}>
           {links.map((link, index) => {
             return (
               <li key={index}>
@@ -64,15 +62,9 @@ const Header = () => {
           <Internationalization />
         </ul>
         <div className="button-burguer" onClick={toggleMenuButton}>
-          <div
-            className={state.buttonBurgerActive ? 'line1 --toggle' : 'line1'}
-          ></div>
-          <div
-            className={state.buttonBurgerActive ? 'line2 --toggle' : 'line2'}
-          ></div>
-          <div
-            className={state.buttonBurgerActive ? 'line3 --toggle' : 'line3'}
-          ></div>
+          <div className={state.buttonBurgerActive ? 'line1 --toggle' : 'line1'}></div>
+          <div className={state.buttonBurgerActive ? 'line2 --toggle' : 'line2'}></div>
+          <div className={state.buttonBurgerActive ? 'line3 --toggle' : 'line3'}></div>
         </div>
       </header>
     </>

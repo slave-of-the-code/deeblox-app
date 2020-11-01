@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
-import ContainerImages from '../shared/containerImages/ContainerImages';
+import i18n from 'i18n';
+import ContainerImages from 'components/shared/containerImages/ContainerImages';
 
-import imageCircle from '../../assets/img-site/circle.png';
-import imageArrow from '../../assets/img-site/arrow.png';
+import imageCircle from 'assets/img-site/circle.png';
+import imageArrow from 'assets/img-site/arrow.png';
 
 import './Jobs.css';
 

@@ -1,6 +1,6 @@
 .internationalization-container {
   display: flex;
-  width: 60px;
+  width: 75px;
   justify-content: space-around;
   padding: 0.5em;
 }
@@ -15,4 +15,11 @@
 .internationalization-container .en {
   background: url('../../assets/img-lang/uk.png') center center no-repeat;
   background-size: contain;
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 768px) {
+  .internationalization-container {
+    width: 90px;
+  }
 }

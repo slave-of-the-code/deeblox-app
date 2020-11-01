@@ -1,9 +1,9 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../../i18n';
+import i18n from 'i18n';
 
-import Button from '../button/Button';
+import Button from 'components/button/Button';
 
 const FormContact = (props) => {
   const url_API_EMAIL = 'https://deeblox-app-backend.herokuapp.com/api/email';

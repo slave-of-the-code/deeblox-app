@@ -1,12 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../i18n';
+import i18n from 'i18n';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faPhoneAlt, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
 
-import SocialNetwork from '../../components/shared/socialNetwork/SocialNetwork';
-import './Footer.css';
+import SocialNetwork from 'components/socialNetwork/SocialNetwork';
+import './Footer.scss';
 
 const Footer = () => {
   const { t } = useTranslation();

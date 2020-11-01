@@ -1,10 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import SocialNetwork from 'components/shared/socialNetwork/SocialNetwork';
-import FormContact from 'components/shared/formContact/FormContact';
+import SocialNetwork from 'components/socialNetwork/SocialNetwork';
+import FormContact from 'components/formContact/FormContact';
 
-import './Contact.css';
+import './Contact.scss';
 
 import imageEnvelope from 'assets/img-site/envelope.png';
 

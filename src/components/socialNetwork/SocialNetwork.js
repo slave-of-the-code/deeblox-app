@@ -1,16 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import i18n from '../../../i18n';
+import i18n from 'i18n';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faTwitter,
-  faFacebookF,
-  faInstagram,
-  faYoutube
-} from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
-import './SocialNetwork.css';
+import './SocialNetwork.scss';
 
 const SocialNetwork = () => {
   const { t } = useTranslation();
@@ -22,12 +17,7 @@ const SocialNetwork = () => {
         {listSocialNetwork.map((item, index) => {
           return (
             <li key={index}>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={t(item.url)}
-                title={t(item.name)}
-              >
+              <a target="_blank" rel="noopener noreferrer" href={t(item.url)} title={t(item.name)}>
                 {showIcon(t(item.name))}
               </a>
             </li>

@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18n';
 
-import Internationalization from 'components/shared/internationalization/Internationalization';
+import Internationalization from 'components/internationalization/Internationalization';
 
 import logo from 'assets/img-site/logo.png';
-import './Header.css';
+import './Header.scss';
 
 const Header = () => {
   const { t } = useTranslation();

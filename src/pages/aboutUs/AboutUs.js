@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import Button from 'components/shared/button/Button';
-import SocialNetwork from 'components/shared/socialNetwork/SocialNetwork';
+import Button from 'components/button/Button';
+import SocialNetwork from 'components/socialNetwork/SocialNetwork';
 
 import aboutUs from 'assets/img-web/aboutUs.png';
 import plane from 'assets/img-site/plane.png';
 
-import './AboutUs.css';
+import './AboutUs.scss';
 
 const AboutUs = () => {
   const { t } = useTranslation();

@@ -1,10 +1,17 @@
 import React from 'react';
 
 const MoreInfo = (props) => {
+  const centerStyle = {
+    height: '500px',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  };
+
   return (
-    <>
-      <h1>more info</h1>
-    </>
+    <section>
+      <h1 style={centerStyle}>more info</h1>
+    </section>
   );
 };
 

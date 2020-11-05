@@ -1,36 +1,34 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Layout from './components/Layout';
-import AboutUs from './components/aboutUs/AboutUs';
-import Jobs from './components/jobs/Jobs';
-import Contact from './components/contact/Contact';
+import Layout from 'layout/Layout';
 
-import './DeebloxApp.css';
+import MoreInfo from 'pages/moreInfo/MoreInfo';
+import AboutUs from 'pages/aboutUs/AboutUs';
+import Jobs from 'pages/jobs/Jobs';
+import Contact from 'pages/contact/Contact';
 
 const DeebloxApp = () => {
-  return (
-    <Router>
-      <Layout>
-        {/* children */}
-        <Switch>
-          <Route exact path="/">
-            <>
-              <AboutUs />
-              <Jobs />
-              <Contact />
-            </>
-          </Route>
-          <Route path="/more-info">
-            <>
-              <h1>more info</h1>
-            </>
-          </Route>
-        </Switch>
-        {/* children */}
-      </Layout>
-    </Router>
-  );
+	return (
+		<Router>
+			<Layout>
+				<Switch>
+					<Route exact path="/">
+						<>
+							<AboutUs />
+							<Jobs />
+							<Contact />
+						</>
+					</Route>
+					<Route path="/more-info">
+						<>
+							<MoreInfo />
+						</>
+					</Route>
+				</Switch>
+			</Layout>
+		</Router>
+	);
 };
 
 export default DeebloxApp;

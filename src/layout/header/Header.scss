@@ -1,0 +1,210 @@
+#header {
+  display: flex;
+  font-size: 16px;
+  align-items: center;
+
+  /* #region logo  */
+  > .logo__container {
+    flex: 2;
+    height: 100px;
+
+    & .logo__image {
+      height: 100%;
+      width: 70%;
+    }
+  }
+  /* #endregion  */
+
+  /* #region burguer button */
+  & .button-burguer {
+    position: absolute;
+    top: 5%;
+    right: 2.5em;
+    display: none;
+
+    > div {
+      width: 25px;
+      height: 5px;
+      background: var(--color-orange-dark);
+      margin: 3px;
+      transition: all 0.25s 0s ease-in;
+    }
+
+    > .line1.--toggle {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    > .line2.--toggle {
+      opacity: 0;
+    }
+    > .line3.--toggle {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  }
+  /* #endregion */
+
+  > .header__navigation {
+    flex: 3;
+    display: flex;
+    height: 100%;
+
+    /* #region navigation */
+    & .navigation {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+
+      > li {
+        height: 100%;
+        padding: 0 1em;
+        border-radius: 0 0 20px 20px;
+        &:hover {
+          background: var(--color-light-gray-15);
+          > a {
+            transform: translateY(20px);
+            font-weight: 900;
+          }
+        }
+        > a {
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &.--active {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    /* #endregion navigation */
+  }
+}
+
+// .link-active {
+//   font-weight: bold;
+// }
+
+/* Large devices (desktops, less than 1366px) */
+@media screen and (max-width: 1366px) {
+  #header > .logo__container .logo__image {
+    height: 95%;
+  }
+}
+
+/* Large devices (desktops, less than 1280px) */
+@media screen and (max-width: 1280px) {
+}
+
+/* Medium devices (tablets, less than 1024px) */
+@media screen and (max-width: 1024px) {
+  #header > .logo__container .logo__image {
+    width: 100%;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  #container > #content > section {
+    padding-top: 12vh;
+  }
+
+  #header {
+    height: 12vh;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    background: var(--color-white);
+
+    & .button-burguer {
+      display: block;
+      cursor: pointer;
+      top: 35%;
+      right: 2em;
+    }
+
+    > .header__navigation {
+      & .navigation {
+        position: absolute;
+        flex-direction: column;
+        width: 100vw;
+        margin-top: 12vh;
+        left: 0;
+        height: 88vh;
+        z-index: 1;
+        background: var(--color-white-75);
+        border-top: 2px solid var(--color-orange-dark);
+        color: var(--color-white);
+        font-size: 2em;
+        letter-spacing: 5px;
+        opacity: 0;
+        transform: translateX(-100%);
+
+        > li {
+          width: 100%;
+          padding: 0;
+          border-radius: 0;
+          transform: none;
+          justify-content: center;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          border-style: none;
+          padding: 0;
+          background: var(--color-orange-transparent-middle);
+
+          &:hover {
+            background: var(--color-white);
+            color: var(--color-orange-dark);
+          }
+
+          > a {
+            display: flex;
+            height: 100%;
+            width: 90%;
+            border-bottom: 2px solid var(--color-orange-dark);
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .internationalization__container {
+    align-items: flex-start;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 640px) */
+@media screen and (max-width: 640px) {
+}
+
+@media screen and (max-width: 480px) {
+  #header {
+    font-size: 10px;
+  }
+
+  #header .logo__container {
+    flex: 4;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  // #header .logo__container {
+  //   left: -15px;
+  //   width: 55%;
+  //   height: 75%;
+  // }
+  .line1.--toggle {
+    transform: rotate(-45deg) translate(-3px, 3px);
+  }
+  .button-burguer > div {
+    width: 20px;
+    height: 3px;
+  }
+}

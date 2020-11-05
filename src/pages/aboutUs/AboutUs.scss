@@ -1,0 +1,199 @@
+#aboutUs {
+  margin: 0 auto;
+  font-size: 16px;
+
+  > .container {
+    display: flex;
+    height: 100vh;
+
+    > .info-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 2em;
+      position: relative;
+
+      > .btn-moreInfo {
+        padding: 1em 0;
+        margin: 1em 0;
+      }
+
+      > .text {
+        padding: 1em 0;
+        margin: 1em 0;
+      }
+
+      & .imagePlane {
+        position: absolute;
+        top: 25%;
+        right: 0;
+        left: 30%;
+        width: 200px;
+        height: 150px;
+        margin: auto;
+        z-index: -1;
+      }
+
+      > .title {
+        color: var(--color-orange-dark);
+        font-size: 2.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        > span {
+          & :nth-of-type(1) {
+            margin-left: 0.85em;
+            font-size: 0.85em;
+            font-weight: 500;
+          }
+          &:nth-of-type(2) {
+            font-weight: bold;
+            font-size: 1.25em;
+            transform: translateY(-14px);
+          }
+        }
+      }
+    }
+
+    > .img-container {
+      flex: 2;
+      justify-content: flex-end;
+      display: flex;
+
+      > .image {
+        height: 100%;
+        width: 100%;
+      }
+
+      > .socialNetwork {
+        color: var(--color-white);
+        position: absolute;
+        right: 2%;
+        bottom: 22%;
+        height: 100px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  #aboutUs > .container > .info-container .imagePlane {
+    top: 12%;
+  }
+  #aboutUs > .container > .img-container > .socialNetwork {
+    right: 4%;
+    bottom: -3%;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: 4%;
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    margin: 0;
+    right: 20%;
+    left: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: 3%;
+    bottom: 19%;
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    top: 50px;
+    width: 150px;
+    right: 10%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #aboutUs .container {
+    flex-direction: column;
+    position: relative;
+  }
+  #aboutUs .container > .info-container {
+    justify-content: flex-start;
+  }
+  #aboutUs .container > .info-container > .text {
+    padding: 1em 0;
+    margin: 0;
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    top: -1%;
+    width: 150px;
+    right: 10%;
+  }
+  #aboutUs .container > .info-container > .btn-moreInfo {
+    z-index: 1;
+    width: fit-content;
+  }
+
+  #aboutUs .container > .img-container {
+    position: absolute;
+    top: 40%;
+    right: 0;
+    width: 75%;
+    height: 60%;
+  }
+  #aboutUs .container > .img-container > .image {
+    opacity: 0.15;
+  }
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: 25px;
+    bottom: 9%;
+    color: gray;
+  }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 640px) {
+  #aboutUs .container > .info-container .imagePlane {
+    left: auto;
+    right: 5%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #aboutUs .container > .info-container > .title {
+    font-size: 2em;
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    width: 125px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #aboutUs {
+    max-width: 1368px;
+    margin: 0 auto;
+    font-size: 16px;
+    height: 402px;
+  }
+  #aboutUs .container > .info-container > .title {
+    font-size: 1.5em;
+  }
+  #aboutUs .container > .info-container > .title > span:nth-of-type(2) {
+    transform: translateY(-10px);
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    top: -7%;
+    right: 9%;
+    width: 85px;
+  }
+  #aboutUs .container > .info-container > .text {
+    padding: 0;
+    font-size: 0.75em;
+    line-height: 17px;
+  }
+  #aboutUs .container > .img-container {
+    top: 50%;
+    right: 7%;
+  }
+}

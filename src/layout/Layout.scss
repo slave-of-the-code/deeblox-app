@@ -1,0 +1,28 @@
+#container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'content'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 15vh 1fr auto;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 100%;
+
+  > #header {
+    grid-area: header;
+  }
+
+  > #content {
+    grid-area: content;
+    > section {
+      min-height: 100vh;
+      max-width: 1368px;
+    }
+  }
+
+  > #footer {
+    grid-area: footer;
+  }
+}

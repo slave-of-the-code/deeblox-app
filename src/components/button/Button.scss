@@ -1,0 +1,17 @@
+.button {
+  color: var(--color-white);
+  background: var(--color-orange);
+  border-radius: 25px;
+  min-width: 125px;
+  border-style: none;
+  padding: 0.5em 0.5em;
+  font-size: 1rem;
+  box-shadow: 4px 4px 10px 0px grey;
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.button:active {
+  box-shadow: none;
+}

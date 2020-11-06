@@ -61,6 +61,7 @@
       flex: 2;
       justify-content: flex-end;
       display: flex;
+      position: relative;
 
       > .image {
         height: 100%;
@@ -70,48 +71,30 @@
       > .socialNetwork {
         color: var(--color-white);
         position: absolute;
-        right: 2%;
-        bottom: 22%;
+        right: 10px;
+        bottom: 210px;
         height: 100px;
       }
     }
   }
 }
 
-@media screen and (max-width: 1366px) {
-  #aboutUs > .container > .info-container .imagePlane {
-    top: 12%;
-  }
-  #aboutUs > .container > .img-container > .socialNetwork {
-    right: 4%;
-    bottom: -3%;
-  }
-}
-
-@media screen and (max-width: 1280px) {
+// #region WIDTH
+@media screen and (max-width: 1664px) {
   #aboutUs .container > .img-container > .socialNetwork {
-    right: 4%;
-  }
-  #aboutUs .container > .info-container .imagePlane {
-    margin: 0;
-    right: 20%;
-    left: auto;
+    bottom: 250px;
   }
 }
-
+@media screen and (max-width: 1350px) {
+}
+@media screen and (max-width: 1264px) {
+  #aboutUs .container > .info-container .imagePlane {
+    top: 22%;
+    left: 40%;
+    width: 165px;
+  }
+}
 @media screen and (max-width: 1024px) {
-  #aboutUs .container > .img-container > .socialNetwork {
-    right: 3%;
-    bottom: 19%;
-  }
-  #aboutUs .container > .info-container .imagePlane {
-    top: 50px;
-    width: 150px;
-    right: 10%;
-  }
-}
-
-@media screen and (max-width: 860px) {
   #aboutUs .container {
     flex-direction: column;
     position: relative;
@@ -124,9 +107,9 @@
     margin: 0;
   }
   #aboutUs .container > .info-container .imagePlane {
-    top: -1%;
+    top: 3%;
     width: 150px;
-    right: 10%;
+    right: -20%;
   }
   #aboutUs .container > .info-container > .btn-moreInfo {
     z-index: 1;
@@ -137,63 +120,91 @@
     position: absolute;
     top: 40%;
     right: 0;
-    width: 75%;
+    left: 0;
+    width: 80%;
     height: 60%;
+    margin: auto;
   }
   #aboutUs .container > .img-container > .image {
     opacity: 0.15;
   }
   #aboutUs .container > .img-container > .socialNetwork {
-    right: 25px;
-    bottom: 9%;
+    right: 0;
+    bottom: 10%;
     color: gray;
   }
 }
-
 @media screen and (max-width: 768px) {
-}
-
-@media screen and (max-width: 640px) {
-  #aboutUs .container > .info-container .imagePlane {
-    left: auto;
-    right: 5%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  #aboutUs .container > .info-container > .title {
-    font-size: 2em;
-  }
-  #aboutUs .container > .info-container .imagePlane {
-    width: 125px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  #aboutUs {
-    max-width: 1368px;
-    margin: 0 auto;
-    font-size: 16px;
-    height: 402px;
-  }
-  #aboutUs .container > .info-container > .title {
-    font-size: 1.5em;
-  }
-  #aboutUs .container > .info-container > .title > span:nth-of-type(2) {
-    transform: translateY(-10px);
-  }
-  #aboutUs .container > .info-container .imagePlane {
-    top: -7%;
-    right: 9%;
-    width: 85px;
-  }
-  #aboutUs .container > .info-container > .text {
-    padding: 0;
-    font-size: 0.75em;
-    line-height: 17px;
-  }
   #aboutUs .container > .img-container {
-    top: 50%;
-    right: 7%;
+    top: 20%;
   }
 }
+@media screen and (max-width: 640px) {
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: -25px;
+  }
+}
+@media screen and (max-width: 500px) {
+}
+// #endregion
+
+// #region HEIGHT
+@media screen and (max-height: 1280px) {
+}
+@media screen and (max-height: 930px) and (min-width: 1025px) {
+  #aboutUs .container > .info-container .imagePlane {
+    margin: 0;
+    right: 10%;
+    left: auto;
+    top: 22%;
+    width: 150px;
+  }
+}
+@media screen and (max-height: 904px) {
+}
+@media screen and (max-height: 768px) and (min-width: 1025px) {
+  #aboutUs .container > .img-container > .socialNetwork {
+    bottom: 140px;
+    right: 15px;
+  }
+  #aboutUs .container > .info-container .imagePlane {
+    top: 125px;
+    width: 125px;
+    right: 10%;
+  }
+}
+@media screen and (max-height: 680px) {
+  #aboutUs > .container > .info-container .imagePlane {
+    top: 12%;
+  }
+  #aboutUs .container > .img-container > .socialNetwork {
+    right: 15px;
+    bottom: 90px;
+  }
+}
+@media screen and (max-height: 648px) {
+  #aboutUs > .container > .info-container .imagePlane {
+    top: 70px;
+    width: 150px;
+    right: 0%;
+  }
+  #aboutUs .container > .img-container > .socialNetwork {
+    bottom: 90px;
+    right: 55px;
+  }
+}
+@media screen and (max-height: 500px) {
+  #aboutUs {
+    font-size: 14px;
+  }
+  #aboutUs > .container > .info-container .imagePlane {
+    top: 0px;
+    width: 125px;
+    right: -10%;
+  }
+  #aboutUs .container > .img-container > .socialNetwork {
+    bottom: 15px;
+    right: -10px;
+  }
+}
+// #endregion

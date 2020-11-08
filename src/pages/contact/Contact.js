@@ -1,5 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
 
 import SocialNetwork from 'components/socialNetwork/SocialNetwork';
 import FormContact from 'components/formContact/FormContact';
@@ -27,6 +29,9 @@ const Contact = () => {
           <SocialNetwork />
           <div className="imageEnvelope" style={imageEnvelopeStyle}></div>
         </div>
+        <a href="#header" className="backHome">
+          <FontAwesomeIcon icon={faArrowAltCircleUp} size="1x" />
+        </a>
       </section>
     </>
   );

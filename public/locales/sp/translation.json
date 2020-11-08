@@ -7,7 +7,7 @@
          "data" : "Suscríbete para recibir nuestras noticias, perspectivas e invitaciones a eventos. Todos los Derechos Reservados - Deeblox 2020" 
     },
     "nav": [
-        { "title": "Home", "href": "#content" },
+        { "title": "Home", "href": "/" },
         { "title": "Nosotros", "href": "#aboutUs" },
         { "title": "Trabajos", "href": "#jobs" },
         { "title": "Casos de Exito", "href": "#successStories" },
@@ -79,5 +79,11 @@
             }
         },
         "buttonSend": "Enviar"
+    },
+    "moreInfo" :{
+        "paragraph": [
+         "Deeblox es una corporación de origen argentino fundada en 2019. Nuestra visión es desarrollar una empresa, comenzando en Latinoamérica, que atienda con excelencia las necesidades de transformación digital de nuestros clientes en todo el mundo para mejorar la experiencia de millones de usuarios y clientes.",
+         "Acompañado dicho reto con la generación de un ámbito apto para formar y consolidar profesionales de tecnología en la región brindando la oportunidad de una carrera de clase mundial."   
+        ] 
     }
 }

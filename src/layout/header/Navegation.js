@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18n';
 
@@ -17,13 +18,23 @@ const Navegation = ({ showLinks, setShow }) => {
     <>
       <ul className={showLinks ? 'navigation --active' : 'navigation'}>
         {links.map((link, index) => {
-          return (
-            <li key={index}>
-              <a href={link.href} onClick={toggleMenu}>
-                {t(link.title)}
-              </a>
-            </li>
-          );
+          if (link.href.indexOf('#') < 0) {
+            return (
+              <li key={index}>
+                <Link to={link.href} onClick={toggleMenu}>
+                  {t(link.title)}
+                </Link>
+              </li>
+            );
+          } else {
+            return (
+              <li key={index}>
+                <a href={link.href} onClick={toggleMenu}>
+                  {t(link.title)}
+                </a>
+              </li>
+            );
+          }
         })}
       </ul>
     </>

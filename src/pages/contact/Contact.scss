@@ -4,6 +4,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  position: relative;
+
+  & .backHome {
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 #contact .container {

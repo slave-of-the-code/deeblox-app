@@ -85,5 +85,15 @@
          "Deeblox es una corporación de origen argentino fundada en 2019. Nuestra visión es desarrollar una empresa, comenzando en Latinoamérica, que atienda con excelencia las necesidades de transformación digital de nuestros clientes en todo el mundo para mejorar la experiencia de millones de usuarios y clientes.",
          "Acompañado dicho reto con la generación de un ámbito apto para formar y consolidar profesionales de tecnología en la región brindando la oportunidad de una carrera de clase mundial."   
         ] 
+    },
+    "messages":{
+        "type" : {
+            "success":"Vamos!!",
+            "danger":"Error",
+            "warning":"Atención",
+            "info":"Información"
+        },
+        "emailSuccess":"Su email fue enviado con exito",
+        "emailError":"No se pudo realizar el envío. Ha sucedido un problema. "
     }
 }

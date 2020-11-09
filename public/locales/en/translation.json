@@ -85,5 +85,15 @@
          "Deeblox is a corporation of Argentine origin founded in 2019. Our vision is to develop a company, starting in Latin America, that meets with excellence the digital transformation needs of our clients around the world to improve the experience of millions of users and clients.",
          "Accompanying this challenge with the generation of a suitable environment to train and consolidate technology professionals in the region, providing the opportunity for a world-class career."   
         ] 
+    },
+    "messages":{
+        "type" : {
+            "success":"Success!!",
+            "danger":"Error",
+            "warning":"Atention",
+            "info":"Info"
+        },
+        "emailSuccess":"Your email was sent successfully.",
+        "emailError":"Cannot send. A problem has occurred."
     }
 }

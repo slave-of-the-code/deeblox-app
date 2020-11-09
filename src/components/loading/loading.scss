@@ -10,4 +10,10 @@
   position: fixed;
   top: 0;
   left: 0;
+  letter-spacing: 5px;
+  font-weight: 500;
+  > svg {
+    color: var(--color-orange-dark);
+    margin: 0.25em 0;
+  }
 }

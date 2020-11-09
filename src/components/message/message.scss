@@ -1,0 +1,63 @@
+.message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   flex-direction: column;
+  //   letter-spacing: 5px;
+  //   font-weight: 500;
+
+  > .message__box {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 2px gray;
+    > h1 {
+      text-transform: uppercase;
+    }
+
+    &.success {
+      color: rgba(0, 128, 0, 1);
+      background: linear-gradient(to top, rgba(182, 239, 182, 1), transparent),
+        linear-gradient(to bottom, rgba(182, 239, 182, 1), transparent);
+      background: rgba(182, 239, 182, 1);
+      border-bottom: 1px solid rgba(0, 128, 0, 1);
+      border-top: 1px solid rgba(0, 128, 0, 1);
+    }
+
+    &.danger {
+      color: rgba(255, 0, 0, 1);
+      background: linear-gradient(to top, rgba(239, 182, 182, 1), transparent),
+        linear-gradient(to bottom, rgba(239, 182, 182, 1), transparent);
+      border-bottom: 1px solid rgba(255, 0, 0, 1);
+      border-top: 1px solid rgba(255, 0, 0, 1);
+    }
+
+    &.warning {
+      color: rgba(255, 255, 0, 1);
+      background: linear-gradient(to top, rgba(239, 239, 182, 1), transparent),
+        linear-gradient(to bottom, rgba(239, 239, 182, 1), transparent);
+      background: rgba(239, 239, 182, 1);
+      border-bottom: 1px solid rgba(255, 255, 0, 1);
+      border-top: 1px solid rgba(255, 255, 0, 1);
+    }
+
+    &.info {
+      color: blue;
+      background: linear-gradient(to top, rgb(182, 239, 239), transparent),
+        linear-gradient(to bottom, rgb(182, 239, 239), transparent);
+      background: rgb(182, 239, 239);
+      border-bottom: 1px solid blue;
+      border-top: 1px solid blue;
+    }
+  }
+}

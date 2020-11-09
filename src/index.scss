@@ -14,8 +14,6 @@
   --color-light-gray-15: rgba(128, 128, 128, 0.15);
   --color-light-gray-75: rgba(128, 128, 128, 0.75);
   --color-light-gray: rgba(128, 128, 128, 1);
-  font-size: 16px;
-  font-family: 'Montserrat', sans-serif;
 }
 
 * {
@@ -23,10 +21,13 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.25s 0s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html,
 body {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
   scroll-behavior: smooth;
 }
 

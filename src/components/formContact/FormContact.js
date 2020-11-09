@@ -1,36 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18n';
 
 import Button from 'components/button/Button';
 
-const FormContact = (props) => {
-  const url_API_EMAIL = 'https://deeblox-app-backend.herokuapp.com/api/email';
+const FormContact = ({ onSubmit, resetForm }) => {
   const { register, handleSubmit, errors, reset } = useForm();
-  const onSubmit = (data) => {
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        firstName: data.firstname,
-        surname: data.surname,
-        telephone: data.telephone,
-        to: data.email,
-        text: data.message
-      })
-    };
-    fetch(url_API_EMAIL, requestOptions)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log('RESULT API EMAIL', result);
-        result.response.indexOf('Ok') >= 0 && reset();
-      })
-      .catch((err) => {
-        console.error('ERROR API EMAIL', err);
-      });
-    // ====================================================
-  };
 
   const { t } = useTranslation();
   const { firstname, surname, telephone, email, message } = i18n.t('contact.inputs', {
@@ -46,6 +22,13 @@ const FormContact = (props) => {
     fontSize: '10px'
   };
 
+  useEffect(() => {
+    resetForm && reset();
+    // return () => {
+    //   cleanup
+    // }
+  }, [reset, resetForm]);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <div className="inputs">
@@ -57,7 +40,7 @@ const FormContact = (props) => {
           <input
             className={`inputText ${errors.firstname && 'isInvalid'}`}
             type="text"
-            ref={register({ required: true, maxLength: 50, pattern: /^[A-Za-z]+$/i })}
+            ref={register({ required: true, maxLength: 50, pattern: /^[A-Za-z ]+$/i })}
             name="firstname"
           ></input>
           <small style={styleMaxCharacter}>
@@ -72,7 +55,7 @@ const FormContact = (props) => {
           <input
             className={`inputText ${errors.surname && 'isInvalid'}`}
             type="text"
-            ref={register({ required: true, maxLength: 50, pattern: /^[A-Za-z]+$/i })}
+            ref={register({ required: true, maxLength: 50, pattern: /^[A-Za-z ]+$/i })}
             name="surname"
           ></input>
           <small style={styleMaxCharacter}>

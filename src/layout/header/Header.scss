@@ -51,12 +51,13 @@
     & .navigation {
       width: 100%;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: flex-start;
 
       > li {
         height: 100%;
         padding: 0 1em;
         border-radius: 0 0 20px 20px;
+        margin: 0 0.5em;
         &:hover {
           background: var(--color-light-gray-15);
           > a {
@@ -79,10 +80,6 @@
     /* #endregion navigation */
   }
 }
-
-// .link-active {
-//   font-weight: bold;
-// }
 
 /* Large devices (desktops, less than 1366px) */
 @media screen and (max-width: 1366px) {

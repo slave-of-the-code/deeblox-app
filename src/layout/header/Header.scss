@@ -157,6 +157,9 @@
           &:hover {
             background: var(--color-white);
             color: var(--color-orange-dark);
+            > a {
+              transform: translateY(0);
+            }
           }
 
           > a {

@@ -7,8 +7,14 @@ import Contact from 'pages/contact/Contact';
 const Home = () => {
   const options = document.querySelectorAll('#header > .header__navigation .navigation > li');
   options.forEach((option) => {
-    option.removeAttribute('style');
+    const a = option.innerHTML;
+    if (a === '<a href="/">Home</a>') {
+      option.setAttribute('style', 'display:none');
+    } else {
+      option.removeAttribute('style');
+    }
   });
+
   // const [options, handleOptionChange] = useOptions();
 
   // useEffect(() => {
@@ -23,8 +29,6 @@ const Home = () => {
   //   //   cleanup
   //   // }
   // }, [handleOptionChange, options]);
-
-  console.log('home');
 
   return (
     <>

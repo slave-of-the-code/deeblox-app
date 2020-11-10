@@ -1,12 +1,11 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18n';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
 
 import ContainerImages from 'components/containerImages/ContainerImages';
 import imageCircle from 'assets/img-site/circle.png';
 import imageArrow from 'assets/img-site/arrow.png';
+import BackButton from 'components/backButton/BackButton';
 
 import './Jobs.scss';
 
@@ -43,10 +42,7 @@ const Jobs = () => {
           <div className="imageCircle" style={imageCircleStyle}></div>
           <div className="imageArrow" style={imageArrowStyle}></div>
         </div>
-
-        <a href="#header" className="backHome">
-          <FontAwesomeIcon icon={faArrowAltCircleUp} size="2x" />
-        </a>
+        <BackButton />
       </section>
     </>
   );

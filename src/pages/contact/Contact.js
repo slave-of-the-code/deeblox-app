@@ -1,16 +1,15 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons';
 
 import SocialNetwork from 'components/socialNetwork/SocialNetwork';
 import FormContact from 'components/formContact/FormContact';
+import Loading from 'components/loading/Loading';
+import Message from 'components/message/Message';
+import BackButton from 'components/backButton/BackButton';
 
 import './Contact.scss';
 
 import imageEnvelope from 'assets/img-site/envelope.png';
-import Loading from 'components/loading/Loading';
-import Message from 'components/message/Message';
 
 const Contact = () => {
   const { t } = useTranslation();
@@ -97,9 +96,7 @@ const Contact = () => {
           <SocialNetwork />
           <div className="imageEnvelope" style={imageEnvelopeStyle}></div>
         </div>
-        <a href="#header" className="backHome">
-          <FontAwesomeIcon icon={faArrowAltCircleUp} size="1x" />
-        </a>
+        <BackButton />
       </section>
       {form.loading && <Loading />}
 

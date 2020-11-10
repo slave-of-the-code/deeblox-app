@@ -1,0 +1,17 @@
+.backHome {
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .backHome {
+    > svg {
+      font-size: 25px;
+    }
+  }
+}

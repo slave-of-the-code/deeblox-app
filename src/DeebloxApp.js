@@ -12,7 +12,7 @@ const DeebloxApp = () => {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/more-info">
+          <Route exact path="/more-info">
             <>
               <MoreInfo />
             </>

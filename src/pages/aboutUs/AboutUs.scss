@@ -4,16 +4,6 @@
   min-height: 100vh;
   position: relative;
 
-  & .backHome {
-    position: absolute;
-    bottom: 2em;
-    right: 2em;
-    opacity: 0.5;
-    &:hover {
-      opacity: 1;
-    }
-  }
-
   > .container {
     display: flex;
     height: 100vh;

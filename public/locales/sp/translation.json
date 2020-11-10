@@ -7,11 +7,11 @@
          "data" : "Suscríbete para recibir nuestras noticias, perspectivas e invitaciones a eventos. Todos los Derechos Reservados - Deeblox 2020" 
     },
     "nav": [
-        { "title": "Home", "href": "/" },
-        { "title": "Nosotros", "href": "#aboutUs" },
-        { "title": "Trabajos", "href": "#jobs" },
-        { "title": "Casos de Exito", "href": "#successStories" },
-        { "title": "Contacto", "href": "#contact" }
+        { "key": "home", "title": "Home", "href": "/" },
+        { "key": "aboutUs", "title": "Nosotros", "href": "#aboutUs" },
+        { "key": "jobs", "title": "Trabajos", "href": "#jobs" },
+        { "key": "successStories", "title": "Casos de Exito", "href": "#successStories" },
+        { "key": "contact", "title": "Contacto", "href": "#contact" }
     ],
     "socialNetwork":[
         { "name" : "Facebook", "url":"https://www.facebook.com/" },

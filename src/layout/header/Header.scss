@@ -151,11 +151,15 @@
           height: 100%;
           border-style: none;
           padding: 0;
+          margin: 0;
           background: var(--color-orange-transparent-middle);
 
           &:hover {
             background: var(--color-white);
             color: var(--color-orange-dark);
+            > a {
+              transform: translateY(0);
+            }
           }
 
           > a {

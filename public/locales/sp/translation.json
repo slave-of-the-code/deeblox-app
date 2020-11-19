@@ -1,16 +1,16 @@
 {
     "company":{
          "name" : "Deeblox" ,
-         "phono" : "+54 11 2821 9000" ,
+         "phono" : "---------" ,
          "eMail" : "contacts@deeblox.com" ,
-         "street" : "Marti Jose 875 - Ciudad Autonoma de Buenos Aires - Buenos Aires" ,
-         "data" : "Suscríbete para recibir nuestras noticias, perspectivas e invitaciones a eventos. Todos los Derechos Reservados - Deeblox 2020" 
+         "street" : "Rondeau 3367 - Distrito Tecnológico - Ciudad Autónoma de Buenos Aires - Buenos Aires" ,
+         "data" : "Suscribite para recibir nuestras noticias, perspectivas e invitaciones a eventos. Todos los Derechos Reservados - Deeblox 2020" 
     },
     "nav": [
         { "key": "home", "title": "Home", "href": "/" },
         { "key": "aboutUs", "title": "Nosotros", "href": "#aboutUs" },
-        { "key": "jobs", "title": "Trabajos", "href": "#jobs" },
-        { "key": "successStories", "title": "Casos de Exito", "href": "#successStories" },
+        { "key": "jobs", "title": "Servicios", "href": "#jobs" },
+        { "key": "successStories", "title": "Casos de Exito", "href": "/more-info" },
         { "key": "contact", "title": "Contacto", "href": "#contact" }
     ],
     "socialNetwork":[
@@ -20,36 +20,36 @@
         { "name" : "Youtube", "url":"https://www.youtube.com" }
     ],
     "aboutUs" : {
-        "title": "Soluciones",
-        "subTitle": "Ágiles",
-        "paragraph": "Somos la combinación de la innovación y la experiencia, logramos en la formación de nuestra empresa el equilibrio de la experiencia en proyectos de alta criticidad, transacciones masivas y tecnología. Enfocados en el éxito de la transformación digital y la generación de valor.",
+        "title": "Transformación",
+        "subTitle": "Digital",
+        "paragraph": "Somos la combinación de la innovación y la experiencia, logramos en la formación de nuestra empresa el equilibrio de la experiencia en proyectos de alta criticidad.",
         "textButton": "Mas informacion"
     },
     "ourServices" : {
         "title" : "Nuestros Servicios",
         "images" : [
             {
-                "title":"Cloud and DevOps",
+                "title":"Cloud and DevOps Studio",
                 "url":"../assets/img-web/chicapunkweb.png",
-                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "text":"Nuestras Celulas Multicloud dan la aceleracion que los productos de Software necesitan, generando herramientas y sinergizando la operacion con el desarrollo en un mundo cada vez mas integrado y veloz.",
                 "isAlignRight": true
             },
             {
-                "title":"Develpment",
+                "title":"Develpment Studio",
                 "url":"../assets/img-web/rulosprogramandoweb.png",
-                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "text":"Enfocados en el desarrollo de software innovando soluciones abarcando desde arquitectura a experiencias de usuario.",
                 "isAlignRight": false
             },
             {
-                "title":"Automation",
+                "title":"Automation Studio",
                 "url":"../assets/img-web/manorelojWEB.png",
-                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "text":"En el mundo del desarrollo, buscamos la automatización para los despliegues de ciclo continuo dando velocidad, estabilidad y dinamismo basados en metodologias Cloud.",
                 "isAlignRight": true
             },
             {
-                "title":"Big Data",
+                "title":"Big Data Studio",
                 "url":"../assets/img-web/appleweb.png",
-                "text":"dolor sit amet, consectetur adipisc Lorem ipsum dolor amet, consectetur adipisc ing elit. Integer vulputate at sed condimen tum. Curabitur lorem nunc, dictum at",
+                "text":"Generamos conocimiento a partir de los datos, imprescindible para entender el mundo de hoy. Especialistas en Cloudera Hadoop y soluciones OpenSource.",
                 "isAlignRight": false
             }
         ]

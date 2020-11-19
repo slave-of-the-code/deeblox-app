@@ -10,8 +10,12 @@ const Internationalization = (props) => {
 
   return (
     <div className="internationalization__container">
-      <span onClick={() => handleClick('sp')} className="sp" title="Spanish"></span>
-      <span onClick={() => handleClick('en')} className="en" title="England"></span>
+      <span onClick={() => handleClick('sp')} className="sp" title="Spanish">
+        ESP
+      </span>
+      <span onClick={() => handleClick('en')} className="en" title="England">
+        ENG
+      </span>
     </div>
   );
 };

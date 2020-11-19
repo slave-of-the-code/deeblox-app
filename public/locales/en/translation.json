@@ -3,14 +3,14 @@
          "name" : "Deeblox" ,
          "phono" : "+54 11 2821 9000" ,
          "eMail" : "contacts@deeblox.com" ,
-         "street" : "875 Marti Jose - Buenos Aires City- Buenos Aires" ,
+         "street" : "3367 Rondeau - Buenos Aires City- Buenos Aires" ,
          "data" : "Subscribe to receive our news, insights, and event invitations. All Rights Reserved - Deeblox 2020" 
     },
     "nav": [
         { "key": "home", "title": "Home", "href": "/" },
         { "key": "aboutUs", "title": "About Us", "href": "#aboutUs" },
-        { "key": "jobs", "title": "Jobs", "href": "#jobs" },
-        { "key": "successStories", "title": "Success Stories", "href": "#successStories" },
+        { "key": "jobs", "title": "Services", "href": "#jobs" },
+        { "key": "successStories", "title": "Success Stories", "href": "/more-info" },
         { "key": "contact", "title": "Contact", "href": "#contact" }
     ],
     "socialNetwork":[

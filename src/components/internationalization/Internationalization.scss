@@ -8,16 +8,20 @@
   > span {
     height: 24px;
     width: 24px;
-    margin: 0 2.5px;
+    margin: 0 10px;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   & .sp {
-    background: url('../../assets/img-lang/sp.png') center center no-repeat;
+    // background: url('../../assets/img-lang/sp.png') center center no-repeat;
     background-size: contain;
   }
 
   & .en {
-    background: url('../../assets/img-lang/uk.png') center center no-repeat;
+    // background: url('../../assets/img-lang/uk.png') center center no-repeat;
     background-size: contain;
   }
 }
